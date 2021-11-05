@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
 <?php
 
-echo "Test code";
+    echo "Test code";
+?>
+
+</body>
+
+</html>
+
+
