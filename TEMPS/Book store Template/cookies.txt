@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+demo2.tokomoo.com	TRUE	/	FALSE	1999999999	woocommerce_items_in_cart	1
+demo2.tokomoo.com	TRUE	/	FALSE	1999999999	wp_woocommerce_session_043763ce9291e15bfcbb7ba589928b64	85364e94ed0fec3eed0c05853ee27201%7C%7C1639131340%7C%7C1639127740%7C%7Cad258600a22859fbe9f910c47c3f4518
+demo2.tokomoo.com	TRUE	/	FALSE	1999999999	woocommerce_cart_hash	1e1db73bed7958b097549717ea9fc9f9
+theme.dev	TRUE	/	FALSE	1999999999	system	PW
+theme.dev	TRUE	/	FALSE	1999999999	caf_ipaddr	88.237.251.141
+theme.dev	TRUE	/	FALSE	1999999999	country	TR
+theme.dev	TRUE	/	FALSE	1999999999	city	Istanbul"
+theme.dev	TRUE	/	FALSE	1999999999	traffic_target	gd
+
