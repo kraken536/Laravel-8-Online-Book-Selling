@@ -31,4 +31,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 //Admin routes
-Route::get('/admin',[App\Http\Controllers\admin\AdminController::class,'index']);
+Route::get('/admin',[App\Http\Controllers\admin\AdminController::class,'index'])->name('admin');
+
+//Admin Login routes
+Route::get('/admin/login',[App\Http\Controllers\admin\AdminController::class,'adminLogin'])->name('adminlogin');
+
+//Logincheck routes
+Route::post('/admin/logincheck',[App\Http\Controllers\admin\AdminController::class,'AdminCheck'])->name('admin_logincheck');
+
+//Logout routes
+Route::get('/admin/logout',[App\Http\Controllers\admin\AdminController::class,'logout'])->name('adminlogout');
