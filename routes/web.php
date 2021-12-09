@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,7 @@ Route::post('/admin/logincheck',[App\Http\Controllers\admin\AdminController::cla
 
 //Logout routes
 Route::get('/admin/logout',[App\Http\Controllers\admin\AdminController::class,'logout'])->name('admin_logout');
+
+
+//Home routes
+Route::get('/home',[HomeController::class,'index'])->name('homepage');
