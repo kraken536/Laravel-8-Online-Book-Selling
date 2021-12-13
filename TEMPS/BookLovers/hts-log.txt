@@ -1,0 +1,337 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 11 Dec 2021 01:46:28 at https://chapterone.qodeinteractive.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://chapterone.qodeinteractive.com/ -O1 "C:\Users\q\Downloads\BookLover\n" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:48:39	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/xmlrpc.php?rsd (from https://chapterone.qodeinteractive.com/)
+01:52:24	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/404-error-page/ (from https://chapterone.qodeinteractive.com/)
+01:56:11	Warning: 	Found for https://chapterone.qodeinteractive.com/checkout/
+01:56:11	Warning: 	File has moved from https://chapterone.qodeinteractive.com/checkout/ to https://chapterone.qodeinteractive.com/cart/
+01:59:05	Warning: 	Link https://chapterone.qodeinteractive.com/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
+01:59:07	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=18 (from https://chapterone.qodeinteractive.com/bestselling-author/)
+01:59:38	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=587 (from https://chapterone.qodeinteractive.com/audiobook-home/)
+01:59:38	Warning: 	Moved Permanently for https://chapterone.qodeinteractive.com/product/final-destination/
+01:59:38	Warning: 	File has moved from https://chapterone.qodeinteractive.com/product/final-destination/ to https://chapterone.qodeinteractive.com/product/fantasy-storytelling-3/
+01:59:38	Warning: 	Moved Permanently for https://chapterone.qodeinteractive.com/product/amster-fog/
+01:59:38	Warning: 	File has moved from https://chapterone.qodeinteractive.com/product/amster-fog/ to https://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/
+01:59:38	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=502 (from https://chapterone.qodeinteractive.com/childrens-books/)
+01:59:38	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=757 (from https://chapterone.qodeinteractive.com/left-menu-home/)
+01:59:59	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=894 (from https://chapterone.qodeinteractive.com/grid-home/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1899 (from https://chapterone.qodeinteractive.com/landing/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/ordering/ (from https://chapterone.qodeinteractive.com/landing/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/bookstore-space/ (from https://chapterone.qodeinteractive.com/landing/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1006 (from https://chapterone.qodeinteractive.com/about-me/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1060 (from https://chapterone.qodeinteractive.com/about-us/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1087 (from https://chapterone.qodeinteractive.com/our-events/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=792 (from https://chapterone.qodeinteractive.com/our-premises/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=852 (from https://chapterone.qodeinteractive.com/coming-soon/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1147 (from https://chapterone.qodeinteractive.com/order-page/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=969 (from https://chapterone.qodeinteractive.com/contact-us/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=809 (from https://chapterone.qodeinteractive.com/pricing-options/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=821 (from https://chapterone.qodeinteractive.com/faq-page/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1095 (from https://chapterone.qodeinteractive.com/event-dates/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=152 (from https://chapterone.qodeinteractive.com/event/festival-of-books/)
+02:01:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1078 (from https://chapterone.qodeinteractive.com/right-sidebar/)
+02:02:00	Error: 	"Forbidden" (403) at link https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/139363784_401991127547984_773925222477986256_n.jpg?_nc_cat=105&ccb=3&_nc_sid=8ae9d6&_nc_ohc=ISEZDuqrqmgAX8eRrPg&_nc_ht=scontent-atl3-2.cdninstagram.com&oh=d06f60028aef9be28008a3a463b3c30a&oe=604A9275 (from https://chapterone.qodeinteractive.com/right-sidebar/)
+02:02:00	Error: 	"Forbidden" (403) at link https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/139465986_3047281422041618_217786302765724424_n.jpg?_nc_cat=103&ccb=3&_nc_sid=8ae9d6&_nc_ohc=5w3aT5lmUwkAX-15ZBP&_nc_ht=scontent-atl3-2.cdninstagram.com&oh=6246c9f86171edf6a05c04667015d343&oe=604CE526 (from https://chapterone.qodeinteractive.com/right-sidebar/)
+02:02:00	Error: 	"Forbidden" (403) at link https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/140293925_683998088945833_4302773607249252919_n.jpg?_nc_cat=106&ccb=3&_nc_sid=8ae9d6&_nc_ohc=iyucaLRZR9gAX9DUION&_nc_oc=AQniXfp47mLPVkTRFtBtL6aHH_wdNtp-cJXXN_yb9qAh9uTg_EyX3nc-Cj314MaHTnQ&_nc_ht=scontent-atl3-2.cdninstagram.com&oh=487eeba1fe5721d88e0cd03cfa8bc351&oe=604D0E14 (from https://chapterone.qodeinteractive.com/right-sidebar/)
+02:02:00	Error: 	"Forbidden" (403) at link https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/140019997_146484720613857_8480437845126902043_n.jpg?_nc_cat=100&ccb=3&_nc_sid=8ae9d6&_nc_ohc=Cf08KpQj2OoAX_iijh3&_nc_ht=scontent-atl3-2.cdninstagram.com&oh=5aba2ce4320faabfd1a5d792ca86e9d7&oe=604D96DB (from https://chapterone.qodeinteractive.com/right-sidebar/)
+02:02:00	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1080 (from https://chapterone.qodeinteractive.com/left-sidebar/)
+02:02:00	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1084 (from https://chapterone.qodeinteractive.com/no-sidebar/)
+02:02:00	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/xmlrpc.php (from https://chapterone.qodeinteractive.com/coffee-and-croissant-with-our-favorite-erika/)
+02:06:53	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=431 (from https://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/)
+02:07:27	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=298 (from https://chapterone.qodeinteractive.com/product/easy-fast-healthy-recipes/)
+02:08:39	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=395 (from https://chapterone.qodeinteractive.com/product/winter-darkest-tragedy-3/)
+02:09:02	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=419 (from https://chapterone.qodeinteractive.com/product/fantasy-storytelling-3/)
+02:09:37	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=413 (from https://chapterone.qodeinteractive.com/product/renaissance-history-3/)
+02:09:58	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=442 (from https://chapterone.qodeinteractive.com/product/sea-sadness-pdf/)
+02:10:28	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=240 (from https://chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/)
+02:12:42	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=138 (from https://chapterone.qodeinteractive.com/product/winter-darkest-tragedy-2/)
+02:13:08	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=248 (from https://chapterone.qodeinteractive.com/product/wellness-and-paradise-2/)
+02:14:09	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=610 (from https://chapterone.qodeinteractive.com/shop-list/two-columns/)
+02:14:10	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=621 (from https://chapterone.qodeinteractive.com/shop-list/three-columns/)
+02:14:11	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=623 (from https://chapterone.qodeinteractive.com/shop-list/four-columns/)
+02:14:12	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=625 (from https://chapterone.qodeinteractive.com/shop-list/four-columns-wide/)
+02:14:14	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=628 (from https://chapterone.qodeinteractive.com/shop-list/five-columns-wide/)
+02:14:15	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2121 (from https://chapterone.qodeinteractive.com/shop-list/six-columns-wide/)
+02:14:17	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=11 (from https://chapterone.qodeinteractive.com/cart/)
+02:14:17	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=13 (from https://chapterone.qodeinteractive.com/my-account/)
+02:14:24	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2076 (from https://chapterone.qodeinteractive.com/product/winter-darkest-tragedy/)
+02:14:24	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2075 (from https://chapterone.qodeinteractive.com/product/symphony-of-trilogy/)
+02:14:25	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2074 (from https://chapterone.qodeinteractive.com/product/wellness-and-paradise/)
+02:15:03	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=981293b090
+02:15:03	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:15:03	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2073 (from https://chapterone.qodeinteractive.com/product/renaissance-history/)
+02:17:02	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2072 (from https://chapterone.qodeinteractive.com/product/fantasy-storytelling/)
+02:17:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=fb2e203234df6dee15934e448ee88971&_wpnonce=981293b090
+02:17:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=fb2e203234df6dee15934e448ee88971&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:17:14	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2071 (from https://chapterone.qodeinteractive.com/product/easy-fast-cooking/)
+02:17:22	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=296472c9542ad4d4788d543508116cbc&_wpnonce=981293b090
+02:17:22	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=296472c9542ad4d4788d543508116cbc&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:17:33	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2070 (from https://chapterone.qodeinteractive.com/product/amster-hamster-trip/)
+02:17:33	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=981293b090
+02:17:33	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:17:33	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2069 (from https://chapterone.qodeinteractive.com/product/summertime-love-stories/)
+02:18:42	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=981293b090
+02:18:42	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:19:03	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2067 (from https://chapterone.qodeinteractive.com/product/learn-to-love-yourself/)
+02:19:44	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=981293b090
+02:19:44	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/?removed_item=1
+02:20:00	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2066 (from https://chapterone.qodeinteractive.com/product/japan-travel-stories/)
+02:20:30	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=151 (from https://chapterone.qodeinteractive.com/event/book-signing/)
+02:20:30	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=153 (from https://chapterone.qodeinteractive.com/event/book-fair/)
+02:20:30	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=136 (from https://chapterone.qodeinteractive.com/event/promotion-book/)
+02:21:54	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=259 (from https://chapterone.qodeinteractive.com/product/amster-hamster-trip-2/)
+02:21:55	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=266 (from https://chapterone.qodeinteractive.com/product/summertime-love-stories-2/)
+02:22:13	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=290 (from https://chapterone.qodeinteractive.com/product/fantasy-storytelling-2/)
+02:22:30	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=401 (from https://chapterone.qodeinteractive.com/product/symphony-of-trilogy-3/)
+02:22:43	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=407 (from https://chapterone.qodeinteractive.com/product/wellness-and-paradise-3/)
+02:23:13	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1434 (from https://chapterone.qodeinteractive.com/product/v-word/)
+02:23:29	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1425 (from https://chapterone.qodeinteractive.com/product/move-a-bit/)
+02:23:56	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1416 (from https://chapterone.qodeinteractive.com/product/youth-experience/)
+02:23:56	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1408 (from https://chapterone.qodeinteractive.com/product/fashion-much/)
+02:24:23	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1401 (from https://chapterone.qodeinteractive.com/product/ola-amigos/)
+02:24:23	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1393 (from https://chapterone.qodeinteractive.com/product/nyc-guide/)
+02:24:39	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=474 (from https://chapterone.qodeinteractive.com/product/beauty-unplugged/)
+02:25:17	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=425 (from https://chapterone.qodeinteractive.com/product/easy-fast-cooking-2/)
+02:25:33	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=943 (from https://chapterone.qodeinteractive.com/product/coffee-thermos/)
+02:25:56	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=945 (from https://chapterone.qodeinteractive.com/product/color-pencils/)
+02:26:23	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=947 (from https://chapterone.qodeinteractive.com/product/month-planner/)
+02:26:57	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=949 (from https://chapterone.qodeinteractive.com/product/red-backpack/)
+02:27:06	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=951 (from https://chapterone.qodeinteractive.com/product/creative-gift/)
+02:27:27	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2141 (from https://chapterone.qodeinteractive.com/product/green-vase/)
+02:27:29	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2139 (from https://chapterone.qodeinteractive.com/product/color-pencils-2/)
+02:27:44	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2137 (from https://chapterone.qodeinteractive.com/product/yellow-chair/)
+02:28:00	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2135 (from https://chapterone.qodeinteractive.com/product/wooden-toy/)
+02:28:24	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2133 (from https://chapterone.qodeinteractive.com/product/red-clock/)
+02:28:24	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=981293b090
+02:28:24	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/grid-home/?removed_item=1
+02:28:25	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=981293b090
+02:28:25	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/grid-home/?removed_item=1
+02:28:25	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=273 (from https://chapterone.qodeinteractive.com/product/learn-to-love-yourself-2/)
+02:28:36	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=281 (from https://chapterone.qodeinteractive.com/product/renaissance-history-2/)
+02:29:44	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=306 (from https://chapterone.qodeinteractive.com/product/metro-murders-trilogy/)
+02:29:45	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=314 (from https://chapterone.qodeinteractive.com/product/raw-modeling-and-makeup-tips/)
+02:31:03	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=324 (from https://chapterone.qodeinteractive.com/product/love-stories-from-paris/)
+02:31:06	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=981293b090
+02:31:06	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:31:06	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=981293b090
+02:31:06	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:31:06	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2065 (from https://chapterone.qodeinteractive.com/product/beauty-unplugged-2/)
+02:31:19	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=981293b090
+02:31:19	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:31:41	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=2064 (from https://chapterone.qodeinteractive.com/product/lost-dreams-in-paris/)
+02:40:10	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=981293b090
+02:40:10	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1
+02:40:39	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=981293b090
+02:40:39	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1
+02:40:59	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=463 (from https://chapterone.qodeinteractive.com/product/east-sun/)
+02:41:15	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c203d8a151612acf12457e4d67635a95&_wpnonce=981293b090
+02:41:15	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c203d8a151612acf12457e4d67635a95&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1
+02:41:37	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=482 (from https://chapterone.qodeinteractive.com/product/kiaras-world/)
+02:42:34	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=981293b090
+02:42:34	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1
+02:43:04	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=7eacb532570ff6858afd2723755ff790&_wpnonce=981293b090
+02:43:04	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=7eacb532570ff6858afd2723755ff790&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1
+02:43:38	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=448 (from https://chapterone.qodeinteractive.com/product/learn-to-love-yourself-3/)
+02:44:04	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=981293b090
+02:44:04	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1
+02:44:04	Error: 	"Not Found" (404) at link https://chapterone.qodeinteractive.com/?p=1295 (from https://chapterone.qodeinteractive.com/product/lost-dreams/)
+02:44:05	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/robots.txt
+02:44:05	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/robots.txt and https://chapterone.qodeinteractive.com/robots.txt
+02:44:05	Warning: 	Warning moved treated for chapterone.qodeinteractive.com/robots.txt (real one is https://chapterone.qodeinteractive.com/robots.txt)
+02:44:05	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/?removed_item=1
+02:44:05	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/?removed_item=1 and https://chapterone.qodeinteractive.com/?removed_item=1
+02:44:05	Warning: 	File has moved from chapterone.qodeinteractive.com/?removed_item=1 to https://chapterone.qodeinteractive.com/?removed_item=1
+02:44:05	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=981293b090
+02:44:05	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1
+02:44:05	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=981293b090
+02:44:05	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/renaissance-history/?add-to-cart=949
+02:44:35	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=981293b090
+02:44:35	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1
+02:45:19	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=fb2e203234df6dee15934e448ee88971&_wpnonce=981293b090
+02:45:19	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=fb2e203234df6dee15934e448ee88971&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/easy-fast-cooking/?add-to-cart=240
+02:45:20	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=296472c9542ad4d4788d543508116cbc&_wpnonce=981293b090
+02:45:20	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=296472c9542ad4d4788d543508116cbc&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/summertime-love-stories/?add-to-cart=945
+02:45:20	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=981293b090
+02:45:20	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/summertime-love-stories/?add-to-cart=945
+02:45:25	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=981293b090
+02:45:25	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/learn-to-love-yourself/?add-to-cart=138
+02:45:43	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=981293b090
+02:45:43	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/japan-travel-stories/?add-to-cart=138
+02:46:00	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=981293b090
+02:46:00	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/author/admin/?removed_item=1
+02:46:08	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=981293b090
+02:46:08	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/author/admin/?removed_item=1
+02:48:12	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=981293b090
+02:48:12	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/v-word/?removed_item=1
+02:51:57	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/grid-home/?removed_item=1
+02:51:57	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/grid-home/?removed_item=1 and https://chapterone.qodeinteractive.com/grid-home/?removed_item=1
+02:51:57	Warning: 	File has moved from chapterone.qodeinteractive.com/grid-home/?removed_item=1 to https://chapterone.qodeinteractive.com/grid-home/?removed_item=1
+02:51:57	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=981293b090
+02:51:57	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/learn-to-love-yourself-2/?add-to-cart=442
+02:53:15	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:53:15	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/shop-list/?removed_item=1 and https://chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:53:15	Warning: 	File has moved from chapterone.qodeinteractive.com/shop-list/?removed_item=1 to https://chapterone.qodeinteractive.com/shop-list/?removed_item=1
+02:53:15	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=981293b090
+02:53:15	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/beauty-unplugged-2/?add-to-cart=442
+02:53:15	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=981293b090
+02:53:15	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/beauty-unplugged-2/?add-to-cart=442
+02:54:16	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=981293b090
+02:54:16	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+02:54:17	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=981293b090
+02:54:17	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+02:54:17	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=981293b090
+02:54:17	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+02:59:55	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1
+02:59:55	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1 and https://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1
+02:59:55	Warning: 	File has moved from chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1 to https://chapterone.qodeinteractive.com/product/amsterdam-travel-stories/?removed_item=1
+02:59:55	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=981293b090
+02:59:55	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=138
+02:59:57	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1
+02:59:57	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1 and https://chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1
+02:59:57	Warning: 	File has moved from chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1 to https://chapterone.qodeinteractive.com/product/fantasy-storytelling-3/?removed_item=1
+03:00:37	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1
+03:00:37	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1 and https://chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1
+03:00:37	Warning: 	File has moved from chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1 to https://chapterone.qodeinteractive.com/product/symphony-of-trilogy-2/?removed_item=1
+03:01:00	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1
+03:01:00	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1 and https://chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1
+03:01:00	Warning: 	File has moved from chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1 to https://chapterone.qodeinteractive.com/product/wellness-and-paradise-2/?removed_item=1
+03:01:39	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1
+03:01:39	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1 and https://chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1
+03:01:39	Warning: 	File has moved from chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1 to https://chapterone.qodeinteractive.com/author/jane-doe/?removed_item=1
+03:02:09	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1
+03:02:09	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1 and https://chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1
+03:02:09	Warning: 	File has moved from chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1 to https://chapterone.qodeinteractive.com/product/renaissance-history/?removed_item=1
+03:02:10	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=981293b090
+03:02:10	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/renaissance-history/?add-to-cart=2141
+03:02:13	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/author/admin/?removed_item=1
+03:02:13	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/author/admin/?removed_item=1 and https://chapterone.qodeinteractive.com/author/admin/?removed_item=1
+03:02:13	Warning: 	File has moved from chapterone.qodeinteractive.com/author/admin/?removed_item=1 to https://chapterone.qodeinteractive.com/author/admin/?removed_item=1
+03:02:49	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=981293b090
+03:02:49	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/amster-hamster-trip-2/?add-to-cart=943
+03:02:49	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=981293b090
+03:02:49	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/amster-hamster-trip-2/?add-to-cart=943
+03:03:04	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/v-word/?removed_item=1
+03:03:04	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/v-word/?removed_item=1 and https://chapterone.qodeinteractive.com/product/v-word/?removed_item=1
+03:03:04	Warning: 	File has moved from chapterone.qodeinteractive.com/product/v-word/?removed_item=1 to https://chapterone.qodeinteractive.com/product/v-word/?removed_item=1
+03:03:04	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=981293b090
+03:03:04	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product/v-word/?add-to-cart=240
+03:05:56	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+03:05:56	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1 and https://chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+03:05:56	Warning: 	File has moved from chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1 to https://chapterone.qodeinteractive.com/shop-list/page/5/?removed_item=1
+03:05:56	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=981293b090
+03:05:56	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product-category/action/page/1/
+03:05:56	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=981293b090
+03:05:56	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product-category/action/page/1/
+03:05:56	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=981293b090
+03:05:56	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=981293b090 to http://chapterone.qodeinteractive.com/product-category/action/page/1/
+03:16:13	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=0e8f716ec8
+03:16:13	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c203d8a151612acf12457e4d67635a95&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c203d8a151612acf12457e4d67635a95&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=7eacb532570ff6858afd2723755ff790&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=7eacb532570ff6858afd2723755ff790&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=296472c9542ad4d4788d543508116cbc&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=296472c9542ad4d4788d543508116cbc&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=fb2e203234df6dee15934e448ee88971&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=fb2e203234df6dee15934e448ee88971&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:16:14	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?remove_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=0e8f716ec8
+03:16:14	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?remove_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:21:48	Warning: 	Moved Permanently for chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:21:48	Warning: 	Redirected link is identical because of 'URL Hack' option: chapterone.qodeinteractive.com/product/east-sun/?removed_item=1 and https://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:21:48	Warning: 	File has moved from chapterone.qodeinteractive.com/product/east-sun/?removed_item=1 to https://chapterone.qodeinteractive.com/product/east-sun/?removed_item=1
+03:22:31	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=0e8f716ec8
+03:22:31	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=f8bf09f5fceaea80e1f864a1b48938bf&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:23:12	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=0e8f716ec8
+03:23:12	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=2f885d0fbe2e131bfc9d98363e55d1d4&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:23:54	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=c203d8a151612acf12457e4d67635a95&_wpnonce=0e8f716ec8
+03:23:54	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=c203d8a151612acf12457e4d67635a95&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:35	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=0e8f716ec8
+03:24:35	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=013d407166ec4fa56eb1e1f8cbe183b9&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=7eacb532570ff6858afd2723755ff790&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=7eacb532570ff6858afd2723755ff790&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=dc87c13749315c7217cdc4ac692e704c&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=3cef96dcc9b8035d23f69e30bb19218a&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=4b86abe48d358ecf194c56c69108433e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=4b6538a44a1dfdc2b83477cd76dee98e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=335f5352088d7d9bf74191e006d8e24c&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=296472c9542ad4d4788d543508116cbc&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=296472c9542ad4d4788d543508116cbc&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=b5f1e8fb36cd7fbeb7988e8639ac79e9&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=1f4fe6a4411edc2ff625888b4093e917&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=07cb5f86508f146774a2fac4373a8e50&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=fb2e203234df6dee15934e448ee88971&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=fb2e203234df6dee15934e448ee88971&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:47	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=0e8f716ec8
+03:24:47	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=6f4920ea25403ec77bee9efce43ea25e&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=c4b31ce7d95c75ca70d50c19aef08bf1&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=325995af77a0e8b06d1204a171010b3a&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=9a49a25d845a483fae4be7e341368e36&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=66368270ffd51418ec58bd793f2d9b1b&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=5d6646aad9bcc0be55b2c82f69750387&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=37d097caf1299d9aa79c2c2b843d2d78&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=9bb6dee73b8b0ca97466ccb24fff3139&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=c902b497eb972281fb5b4e206db38ee6&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+03:24:48	Warning: 	Found for https://chapterone.qodeinteractive.com/cart/?undo_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=0e8f716ec8
+03:24:48	Warning: 	File has moved from https://chapterone.qodeinteractive.com/cart/?undo_item=1c1d4df596d01da60385f0bb17a4a9e0&_wpnonce=0e8f716ec8 to http://chapterone.qodeinteractive.com/product/east-sun/?add-to-cart=943
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 hours 38 minutes 20 seconds : 1936 links scanned, 1733 files written (169463529 bytes overall) [148569068 bytes received at 25181 bytes/sec], 42332868 bytes transferred using HTTP compression in 683 files, ratio 20%, 4.3 requests per connection
+(93 errors, 233 warnings, 0 messages)
