@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     
-@section('title','Admin Panel')    
+@section('title','Add Category')    
 @include('admin._header')
 @include('admin._sidebar')
-@include('admin._content')
+@include('admin.cat_create_content')
 @include('admin._footer')
 
 </html>

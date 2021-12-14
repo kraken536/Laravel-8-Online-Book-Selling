@@ -308,6 +308,12 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <a href="#" class="btn btn-secondary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Split Button Secondary</span>
+                                    </a>
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -315,6 +321,7 @@
                                             <th>Title</th>
                                             <th>Description</th>
                                             <th>Status</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -325,6 +332,12 @@
                                             <td>{{$rs->title}}</td>
                                             <td>{{$rs->description}}</td>
                                             <td>{{$rs->status}}</td>
+                                            <td><a href="#" class="btn btn-danger btn-icon-split">
+                                                <span class="icon text-white-50">
+                                                    <i class="fas fa-trash"></i>
+                                                </span>
+                                                <span class="text">Delete</span>
+                                            </a></td>
                                         </tr>
                                         @endforeach
                                     </tbody>
