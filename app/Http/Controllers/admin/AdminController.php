@@ -35,6 +35,13 @@ class AdminController extends Controller
         }
     }
 
+    public function reset(){
+
+
+
+        return view('admin.reset_password');
+    }
+
     public function logout(Request $request){
         Auth::logout();
 
@@ -42,6 +49,6 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/admin/login');
+        return redirect('admin/login');
     }
 }

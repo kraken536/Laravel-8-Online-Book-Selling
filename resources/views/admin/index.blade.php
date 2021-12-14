@@ -1,7 +1,10 @@
-@extends('layouts.admin')
+<!DOCTYPE html>
+<html lang="en">
+@section('title','Admin Panel')    
+@include('admin._header')
+@include('admin._sidebar')
+@include('admin._content')
+@include('admin._footer')
 
-@section('title','Admin Panel Home Page')
+</html>
 
-@section('content')
-    @include('admin._content')
-@endsection

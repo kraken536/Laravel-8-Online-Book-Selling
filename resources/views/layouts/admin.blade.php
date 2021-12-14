@@ -18,7 +18,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('assets') }}/admin/assets/images/favicon.ico" />
     @yield('css')
-    @yield('javascript')
+    @yield('javacsript')
   </head>
   <body>
 
@@ -28,5 +28,5 @@
 @include('admin._content')
 @include('admin._footer')
 
- </body>
+</body>
 </html>

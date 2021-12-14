@@ -1,40 +1,46 @@
-<div class="container-fluid page-body-wrapper">
-<!-- partial:partials/_sidebar.html -->
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <ul class="nav">
-    <li class="nav-item nav-profile">
-        <a href="#" class="nav-link">
-        <div class="nav-profile-image">
-            <img src="{{ asset('assets') }}/admin/assets/images/faces/face1.jpg" alt="profile">
-            <span class="login-status online"></span>
-            <!--change to offline or busy as needed-->
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ Route('admin_home') }}">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="nav-profile-text d-flex flex-column">
-            @auth
-                <span class="font-weight-bold mb-2">{{ Auth::user()->name }}</span>
-                <span class="text-secondary text-small">Administrator</span>
-            @endauth
-        </div>
-        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-        </a>
+        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ Route('admin_home') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
     </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Interface
+    </div>
+
+    <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="">
-        <span class="menu-title">Dashboard</span>
-        <i class="mdi mdi-home menu-icon"></i>
-        </a>
+        <a class="nav-link" href="{{Route('admin_category')}}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Category</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <span class="menu-title">Tables</span>
-        <i class="mdi mdi-table-large menu-icon"></i>
-        </a>
-        <div class="collapse" id="ui-basic">
-        <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#">Simple Tables</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{{ route('admin_category_show') }}">Data Tables</a></li>
-        </ul>
-        </div>
-    </li>
-    </ul>
-</nav>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
+<!-- End of Sidebar -->

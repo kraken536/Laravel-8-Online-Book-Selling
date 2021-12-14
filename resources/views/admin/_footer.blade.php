@@ -1,29 +1,42 @@
-          <!-- partial:partials/_footer.html -->
-          <footer class="footer">
-            <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates </a> from Bootstrapdash.com</span>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
             </div>
-          </footer>
-          <!-- partial -->
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="{{ Route('admin_logout') }}">Logout</a>
+            </div>
         </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ asset('assets') }}/admin/assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{ asset('assets') }}/admin/assets/vendors/chart.js/Chart.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('assets') }}/admin/assets/js/off-canvas.js"></script>
-    <script src="{{ asset('assets') }}/admin/assets/js/hoverable-collapse.js"></script>
-    <script src="{{ asset('assets') }}/admin/assets/js/misc.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="{{ asset('assets') }}/admin/assets/js/dashboard.js"></script>
-    <script src="{{ asset('assets') }}/admin/assets/js/todolist.js"></script>
-    <!-- End custom js for this page -->
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="{{ asset('assets')}}/admin/vendor/jquery/jquery.min.js"></script>
+<script src="{{ asset('assets')}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{{ asset('assets')}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('assets')}}/admin/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="{{ asset('assets')}}/admin/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{ asset('assets')}}/admin/js/demo/chart-area-demo.js"></script>
+<script src="{{ asset('assets')}}/admin/js/demo/chart-pie-demo.js"></script>
+</body>

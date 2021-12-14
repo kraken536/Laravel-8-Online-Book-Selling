@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -14,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        echo 'This is the category page!!!!';
+        $datalist = DB::table('categories')->get();
+        return view('admin.category',['datalist'=> $datalist]);
     }
 
     /**
@@ -46,7 +49,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**

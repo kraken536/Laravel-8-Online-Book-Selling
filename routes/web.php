@@ -29,6 +29,7 @@ Route::get('/', function () {
     ]);
 });
 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
@@ -41,6 +42,7 @@ Route::middleware(['auth:sanctum','verified'])->get('/admin',function(){
     return view('admin.index');
 })->name('admin_checker');
 
+
 //Admin Login routes
 Route::get('/admin/login',[App\Http\Controllers\admin\AdminController::class,'adminLogin'])->name('admin_login');
 
@@ -50,16 +52,18 @@ Route::post('/admin/logincheck',[App\Http\Controllers\admin\AdminController::cla
 //Logout routes
 Route::get('/admin/logout',[App\Http\Controllers\admin\AdminController::class,'logout'])->name('admin_logout');
 
+//Admin Login routes
+Route::get('/admin/reset',[App\Http\Controllers\admin\AdminController::class,'reset'])->name('admin_reset');
 
 //Home routes
 Route::get('/home',[HomeController::class,'index'])->name('homepage');
 
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){
-    Route::get('/',[App\Http\Controllers\admin\CategoryController::class,'index'])->name('admin_home');
+    Route::get('/',[App\Http\Controllers\admin\AdminController::class,'index'])->name('admin_home');
 
     Route::get('category',[App\Http\Controllers\admin\CategoryController::class,'index'])->name('admin_category');
-    Route::get('category/add', [App\Http\Controllers\admin\CategoryController::class,'create'])->name('admin_category_add');
+    Route::get('category/create', [App\Http\Controllers\admin\CategoryController::class,'create'])->name('admin_category_create');
     Route::get('category/update',[App\Http\Controllers\admin\CategoryController::class,'update'])->name('admin_category_update');
     Route::get('category/delete',[App\Http\Controllers\admin\CategoryController::class,'destroy'])->name('admin_category_delete');
     Route::get('category/show',[App\Http\Controllers\admin\CategoryController::class,'show'])->name('admin_category_show');

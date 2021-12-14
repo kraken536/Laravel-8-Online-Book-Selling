@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login Panel</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/admin/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/admin/assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('assets') }}/admin/assets/images/favicon.ico" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin Login Panel</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('assets')}}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('assets')}}/admin/css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
-    <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth">
-        <div class="row flex-grow">
-            <div class="col-lg-4 mx-auto">
-            <div class="auth-form-light text-left p-5">
-                <div class="brand-logo">
-                <img src="{{ asset('assets') }}/admin/assets/images/logo.svg">
-                </div>
-                <h4>Hello! let's get started</h4>
-                <h6 class="font-weight-light">Sign in to continue.</h6>
-                <form action ="{{ route('admin_logincheck') }}" method="post" class="pt-3">
-                    @csrf
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="mt-3">
-                        <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Login</button>
-                    </div>
-                    <div class="my-2 d-flex justify-content-between align-items-center">
-                        <div class="form-check">
-                        <label class="form-check-label text-muted">
-                            <input type="checkbox" class="form-check-input"> Keep me signed in </label>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    </div>
+                                    <form action ="{{ route('admin_logincheck') }}" method="post" class="user">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        
+                                        <hr>
+                                        <a href="" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                        </a>
+                                        <a href="" class="btn btn-facebook btn-user btn-block">
+                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                        </a>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="{{ Route('admin_reset') }}">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="auth-link text-black">Forgot password?</a>
                     </div>
-                    <div class="mb-2">
-                        <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                        <i class="mdi mdi-facebook mr-2"></i>Connect using facebook </button>
-                    </div>
-                    <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="register.html" class="text-primary">Create</a>
-                    </div>
-                </form>
+                </div>
+
             </div>
-            </div>
+
         </div>
-        </div>
-        <!-- content-wrapper ends -->
+
     </div>
-    <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ asset('assets') }}/admin/assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('assets') }}/admin/assets/js/off-canvas.js"></script>
-    <script src="{{ asset('assets') }}/admin/assets/js/hoverable-collapse.js"></script>
-    <script src="{{ asset('assets') }}/admin/assets/js/misc.js"></script>
-    <!-- endinject -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('assets')}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{ asset('assets')}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('assets')}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('assets')}}/admin/js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
