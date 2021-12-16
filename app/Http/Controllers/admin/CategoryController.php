@@ -74,7 +74,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Category::find($id);
+        $datalist = DB::table('categories')->get()->where('parent_id', 0);
+        return view('admin.category_edit',['data'=> $data, 'datalist'=>$datalist]);
     }
 
     /**
@@ -84,9 +86,18 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update()//Request $request, $id
+    public function update(Request $request, $id)
     {
-        echo "There is nothing for the moment";
+        //DB::table('categories')->where('id', $id)->update(['votes' => 1]);
+        DB::table('categories')->where('id', $id)->update([
+            'parent_id' => $request->input('parent_id'),
+            'title' => $request->input('title'),
+            'keywords' => $request->input('keywords'),
+            'description' => $request->input('description'),
+            'slug' => $request->input('slug'),
+            'status' => $request->input('status')
+        ]);
+        return redirect()->route('admin_category');
     }
 
     /**
