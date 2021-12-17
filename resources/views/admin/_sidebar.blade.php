@@ -33,6 +33,11 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Category</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_product')}}">
+            <i style='font-size:14px' class='fas'>&#xf02d;</i>
+            <span>Products</span></a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
