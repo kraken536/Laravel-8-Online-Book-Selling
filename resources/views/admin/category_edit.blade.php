@@ -7,28 +7,28 @@
     <div class="mb-3">
         <label class="form-label">Parent</label>
         <select class="form-control" name="parent_id">
-            <option value={{ $data->parent_id }} selected="selected"></option>
+            <option value="{{ $data->parent_id }}" selected="selected"></option>
             @foreach ($datalist as $rs)
-                <option value ={{ $rs->id }}>{{ $rs->title }}</option>
+                <option value ="{{ $rs->id }}">{{ $rs->title }}</option>
             @endforeach
             <option value="0">Main Category</option>
         </select>
     </div>
-    <div class="mb-3">
+    <div>
         <label class="form-label">Title</label>
-        <input type="text" class="form-control" name="title" value={{ $data->title }}>
+        <input type="text" class="form-control" name="title" value="{{ $data->title }}">
     </div>
     <div class="mb-3">
         <label class="form-label">Keywords</label>
-        <input type="text" class="form-control" name="keywords" value={{ $data->keywords }}>
+        <input type="text" class="form-control" name="keywords" value="{{ $data->keywords }}">
     </div>
     <div class="mb-3">
         <label class="form-label">Description</label>
-        <input type="text" class="form-control" name="description" value={{ $data->description }}>
+        <input type="text" class="form-control" name="description" value="{{ $data->description }}">
     </div>
     <div class="mb-3">
         <label class="form-label">Slug</label>
-        <input type="text" class="form-control" name="slug" value={{ $data->slug }}>
+        <input type="text" class="form-control" name="slug" value="{{ $data->slug }}">
     </div>
     <div class="mb-3">
         <label class="form-label">Status</label>

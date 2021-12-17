@@ -16,12 +16,12 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->integer('parent_id')->default(0);
-            $table->string('title',150);
-            $table->string('keywords')->nullable();
-            $table->string('description')->nullable();
-            $table->string('images',75)->nullable();
-            $table->string('slug',100)->nullable();
-            $table->string('status',5)->nullable()->default('False');
+            $table->String('title',150);
+            $table->String('keywords')->nullable();
+            $table->String('description')->nullable();
+            $table->String('images',75)->nullable();
+            $table->String('slug',100)->nullable();
+            $table->String('status',5)->nullable()->default('False');
             $table->timestamps();// This will create the created_at and the updated_at fields
         });
     }
