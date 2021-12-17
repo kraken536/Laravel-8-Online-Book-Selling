@@ -119,8 +119,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $product, $id)
     {
-        //
+        $data = Product::find($id);
+        $data->delete();
+
+        return redirect()->route('admin_product');
     }
 }

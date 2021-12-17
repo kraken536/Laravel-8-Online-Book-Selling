@@ -73,20 +73,7 @@ Route::middleware('auth')->prefix('admin')->group(function(){
 
 });
 
-/*
 //Product Route
-Route::prefix('admin')->group(function(){
-
-    Route::get('product',[App\Http\Controllers\admin\ProductController::class,'index'])->name('admin_product');
-    Route::get('product/add', [App\Http\Controllers\admin\ProductController::class,'add'])->name('admin_product_add');
-    Route::post('category/create', [App\Http\Controllers\admin\ProductController::class,'create'])->name('admin_category_create');
-    Route::post('category/update/{id}',[App\Http\Controllers\admin\ProductController::class,'update'])->name('admin_category_update');
-    Route::get('category/edit/{id}',[App\Http\Controllers\admin\ProductController::class,'edit'])->name('admin_category_edit');
-    Route::get('category/delete/{id}',[App\Http\Controllers\admin\ProductController::class,'destroy'])->name('admin_category_delete');
-    Route::get('category/show',[App\Http\Controllers\admin\ProductController::class,'show'])->name('admin_category_show');
-
-});
-*/
 Route::prefix('product')->group(function(){
 
     Route::get('/',[App\Http\Controllers\admin\ProductController::class,'index'])->name('admin_product');
@@ -94,6 +81,5 @@ Route::prefix('product')->group(function(){
     Route::post('store', [App\Http\Controllers\admin\ProductController::class,'store'])->name('admin_product_store');
     Route::get('edit/{id}', [App\Http\Controllers\admin\ProductController::class,'edit'])->name('admin_product_edit');
     Route::post('update/{id}', [App\Http\Controllers\admin\ProductController::class,'update'])->name('admin_product_update');
-    Route::get('delete/{id}', [App\Http\Controllers\admin\ProductController::class,'add'])->name('admin_product_delete');
-    Route::get('show', [App\Http\Controllers\admin\ProductController::class,'add'])->name('admin_product_show');
+    Route::get('delete/{id}', [App\Http\Controllers\admin\ProductController::class,'destroy'])->name('admin_product_delete');
 });
