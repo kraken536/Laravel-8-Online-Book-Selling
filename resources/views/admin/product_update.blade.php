@@ -1,5 +1,13 @@
 @extends('admin._blankpage')
 
+@section('javascript')
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+@endsection
+
 
 @section('contents')
 
@@ -15,8 +23,8 @@
         </select>
     </div>
     <div class="mb-3">
-        <label class="form-label">Title</label>
-        <input type="text" class="form-control" name="title" value="{{ $data->title }}">
+        <label class="form-label">Title *</label>
+        <input type="text" class="form-control" name="title" value="{{ $data->title }}" required>
     </div>
     <div class="mb-3">
         <label class="form-label">Keywords</label>
@@ -31,13 +39,29 @@
         <input type="number" class="form-control" name="price" value="{{ $data->price }}">
     </div>
     <div class="mb-3">
-        <label class="form-label">Quantity</label>
-        <input type="number" class="form-control" name="quantity" value="{{ $data->quantity }}">
+        <label class="form-label">Quantity *</label>
+        <input type="number" class="form-control" name="quantity" value="{{ $data->quantity }}" required>
     </div>
     <div class="mb-3">
-        <label class="form-label">Details</label>
-        <input type="text" class="form-control" name="details" value="{{ $data->details }}">
+        <label class="form-label">Details</label>  
+        <textarea id="summernote" name="details">{{ $data->details }}</textarea>
+        <script>
+            $('#summernote').summernote({
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+            ] 
+            });
+        </script>
     </div>
+    
     <div class="mb-3">
         <label class="form-label">Tax</label>
         <input type="number" class="form-control" name="tax" value="{{ $data->tax }}">

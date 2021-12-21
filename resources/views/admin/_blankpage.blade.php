@@ -22,6 +22,7 @@
 
     <!-- Custom styles for this page -->
     <link href="{{ asset('assets') }}/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    @yield('javascript')
 
 </head>
 

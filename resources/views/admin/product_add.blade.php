@@ -1,5 +1,12 @@
 @extends('admin._blankpage')
 
+@section('javascript')
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+@endsection
 
 @section('contents')
 <form action = "{{ route('admin_product_store') }}" method ="post">
@@ -13,8 +20,8 @@
         </select>
     </div>
     <div class="mb-3">
-        <label class="form-label">Title</label>
-        <input type="text" class="form-control" name="title">
+        <label class="form-label">Title *</label>
+        <input type="text" class="form-control" name="title" required>
     </div>
     <div class="mb-3">
         <label class="form-label">Keywords</label>
@@ -29,13 +36,35 @@
         <input type="number" class="form-control" name="price">
     </div>
     <div class="mb-3">
-        <label class="form-label">Quantity</label>
-        <input type="number" class="form-control" name="quantity">
+        <label class="form-label">Quantity *</label>
+        <input type="number" class="form-control" name="quantity" required>
     </div>
+
     <div class="mb-3">
-        <label class="form-label">Details</label>
-        <input type="text" class="form-control" name="details">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" name="description">
     </div>
+
+    <div class="mb-3">
+        <label class="form-label">Details</label>  
+        <textarea id="summernote" name="details"></textarea>
+        <script>
+            $('#summernote').summernote({
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+            ] 
+            });
+        </script>
+    </div>
+    
     <div class="mb-3">
         <label class="form-label">Tax</label>
         <input type="number" class="form-control" name="tax" value="18">
