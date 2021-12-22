@@ -9,7 +9,7 @@
 @endsection
 
 @section('contents')
-<form action = "{{ route('admin_product_store') }}" method ="post">
+<form action = "{{ route('admin_product_store') }}" method ="post" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
         <label class="form-label">Category</label>
@@ -39,12 +39,6 @@
         <label class="form-label">Quantity *</label>
         <input type="number" class="form-control" name="quantity" required>
     </div>
-
-    <div class="mb-3">
-        <label class="form-label">Description</label>
-        <input type="text" class="form-control" name="description">
-    </div>
-
     <div class="mb-3">
         <label class="form-label">Details</label>  
         <textarea id="summernote" name="details"></textarea>
@@ -65,6 +59,11 @@
         </script>
     </div>
     
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input type="file" class="form-control" name="image">
+    </div>
+
     <div class="mb-3">
         <label class="form-label">Tax</label>
         <input type="number" class="form-control" name="tax" value="18">

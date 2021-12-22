@@ -22,6 +22,7 @@
 
     <!-- Custom styles for this page -->
     <link href="{{ asset('assets') }}/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
 
 </head>
 
@@ -79,7 +80,11 @@
                                             <td>{{$rs->title}}</td>
                                             <td>{{$rs->quantity}}</td>
                                             <td>{{$rs->price}}</td>
-                                            <td>images</td>
+                                            <td>
+                                                @if($rs->image)
+                                                    <img src="{{ Storage::url($rs->image) }}" height="60" alt="...">
+                                                @endif
+                                            </td>
                                             <td>{{$rs->status}}</td>
                                             <td style="text-align: center"><a href="{{ route('admin_product_edit', ['id' => $rs->id]) }}" alt="Edit" title="Edit" ><button type="button" class="btn btn-success">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
@@ -91,7 +96,6 @@
                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
                                 </svg> </button></a></td><!--DELETE button -->
                                         </tr>
-                                        
                                         @endforeach
                                     </tbody>
                                 </table>
