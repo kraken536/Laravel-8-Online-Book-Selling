@@ -11,7 +11,7 @@
 
 @section('contents')
 
-<form action ="{{ route('admin_product_update', ['id' => $data->id]) }}" method ="post"  enctype="multipart/form-data">
+<form role="form" action="{{route('admin_product_update',['id' => $data->id])}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
         <label class="form-label">Category</label>
@@ -64,17 +64,17 @@
 
     <div class="mb-3">
         <label class="form-label">Images</label>
-        <input type="file" class="form-control" name="image" value="{{ $data->image }}">
+        <input type="file" class="form-control" name="image" value="{{$data->image}}">
         
         @if($data->image)
-            <img src="{{ Storage::url($data->image) }}" height="100" alt="Image">
+            <img src="{{Storage::url($data->image)}}" height="100" alt="Image">
         @endif
     </div>
     
 
     <div class="mb-3">
         <label class="form-label">Tax</label>
-        <input type="number" class="form-control" name="tax" value="{{ $data->tax }}">
+        <input type="number" class="form-control" name="tax" value="{{$data->tax}}">
     </div>
     <div class="mb-3">
         <label class="form-label">Slug</label>

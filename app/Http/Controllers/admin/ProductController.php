@@ -55,7 +55,9 @@ class ProductController extends Controller
         $data->status = $request->input('status');
         $data->tax = $request->input('tax');
         $data->slug = $request->input('slug');
-        $data->image = Storage::putFile('images', $request->file('image'));
+        if($request->hasFile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
         $data->save();
 
         return redirect()->route('admin_product');
@@ -97,11 +99,6 @@ class ProductController extends Controller
     {
         $data = Product::find($id);
 
-        // if($request->hasFile('image')){
-        //     $data->image = Storage::putFile('images', $request->file('image'));
-
-        // }
-
         $data->title = $request->input('title');
         $data->keywords = $request->input('keywords');
         $data->description = $request->input('description');
@@ -113,7 +110,9 @@ class ProductController extends Controller
         $data->status = $request->input('status');
         $data->tax = $request->input('tax');
         $data->slug = $request->input('slug');
-        $data->image = Storage::putFile('images', $request->file('image'));
+        if($request->hasFile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
         
         $data->save();    
 
