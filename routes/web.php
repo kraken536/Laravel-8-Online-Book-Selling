@@ -87,8 +87,8 @@ Route::prefix('product')->group(function(){
 //Image Route Controller/Product Route
 Route::prefix('image')->group(function(){
 
-    Route::get('create/{id}', [App\Http\Controllers\admin\ImageController::class,'create'])->name('admin_image_add');
-    // Route::post('store', [App\Http\Controllers\admin\ImageController::class,'store'])->name('admin_image_store');
-    // Route::get('delete/{id}', [App\Http\Controllers\admin\ImageController::class,'destroy'])->name('admin_image_delete');
-    // Route::post('show', [App\Http\Controllers\admin\ImageController::class,'update'])->name('admin_image_update');
+    Route::get('create/{product_id}', [App\Http\Controllers\admin\ImageController::class,'create'])->name('admin_image_add');
+    Route::post('store/{product_id}', [App\Http\Controllers\admin\ImageController::class,'store'])->name('admin_image_store');
+    Route::get('delete/{id}/{product_id}', [App\Http\Controllers\admin\ImageController::class,'destroy'])->name('admin_image_delete');
+    Route::post('update/{id}', [App\Http\Controllers\admin\ImageController::class,'update'])->name('admin_image_update');
 });

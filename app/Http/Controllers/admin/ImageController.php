@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -24,11 +25,12 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create($product_id)
     {
-        $data= Product::find($id);
+        $data= Product::find($product_id);
+        $image_list = Image::where('product_id', $product_id)->get();
         
-        return view('admin.image_add',['data'=>$data]);
+        return view('admin.image_add',['data'=>$data, 'image_list'=>$image_list]);
     }
 
     /**
@@ -37,9 +39,18 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $product_id)
     {
-        //
+        $data = new Image;
+
+        $data->title = $request->input('title');
+        $data->product_id = $product_id;
+        if($request->hasFile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
+        $data->save();
+
+        return redirect()->route('admin_image_add',['product_id'=>$product_id]);
     }
 
     /**
@@ -71,9 +82,18 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image $image)
+    public function update(Request $request, Image $image, $id)
     {
-        //
+        $data = Image::find($id);
+
+        $data->title = $request->input('slug');
+        if($request->hasFile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
+        
+        $data->save();    
+
+        return redirect()->route('admin_image_add',['id'=>$id]);
     }
 
     /**
@@ -82,8 +102,11 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy(Image $image, $id, $product_id)
     {
-        echo("Destroy blade");
+        $data = Image::find($id);
+        $data->delete();
+
+        return redirect()->route('admin_image_add', ['product_id'=>$product_id]);
     }
 }
