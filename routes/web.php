@@ -90,5 +90,9 @@ Route::prefix('image')->group(function(){
     Route::get('create/{product_id}', [App\Http\Controllers\admin\ImageController::class,'create'])->name('admin_image_add');
     Route::post('store/{product_id}', [App\Http\Controllers\admin\ImageController::class,'store'])->name('admin_image_store');
     Route::get('delete/{id}/{product_id}', [App\Http\Controllers\admin\ImageController::class,'destroy'])->name('admin_image_delete');
-    Route::post('update/{id}', [App\Http\Controllers\admin\ImageController::class,'update'])->name('admin_image_update');
 });
+
+
+//Setting routes
+Route::get('setting',[App\Http\Controllers\admin\SettingController::class,'index'])->name('admin_setting');
+Route::post('setting/update',[App\Http\Controllers\admin\SettingController::class,'update'])->name('admin_setting_update');

@@ -38,7 +38,12 @@
             <i style='font-size:14px' class='fas'>&#xf02d;</i>
             <span>Products</span></a>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_setting')}}">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Settings</span>
+        </a>
+    </li>                
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
