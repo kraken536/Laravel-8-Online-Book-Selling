@@ -48,7 +48,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Keywords</label>
-                <input type="text" class="form-control" name="keywords" value="{{ $data->keyword }}">
+                <input type="text" class="form-control" name="keywords" value="{{ $data->keywords }}">
             </div>
             <div class="mb-3">
                 <label class="form-label">Description</label>

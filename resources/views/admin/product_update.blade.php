@@ -16,9 +16,10 @@
     <div class="mb-3">
         <label class="form-label">Category</label>
         <select class="form-control" name="parent_id">
-            <option value="{{ $data->category_id }}" selected="selected"></option>
             @foreach ($datalist as $rs)
-                <option value ="{{ $rs->id }}">{{ $rs->title }}</option>
+                <option value ="{{ $rs->id }}" @if($rs->id == $data->category_id) selected="selected" @endif>
+                    {{App\Http\Controllers\admin\CategoryController::getParentsTree($rs, $rs->title)}}
+                </option>
             @endforeach
         </select>
     </div>
