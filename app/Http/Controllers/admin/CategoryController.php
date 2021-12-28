@@ -13,6 +13,7 @@ class CategoryController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
 
     protected $appends=[
@@ -28,10 +29,10 @@ class CategoryController extends Controller
 
         return CategoryController::getParentsTree($parent, $title);
     }
-    
+
     public function index()
     {
-        $datalist = Category::with('children')->get();
+        $datalist = Category::with('children')->get();  
         //DB::table('categories')->get();
         return view('admin.category',['datalist'=> $datalist]);
     }

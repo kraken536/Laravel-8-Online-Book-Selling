@@ -19,6 +19,7 @@ class ProductController extends Controller
     public function index()
     {
         $datalist = Product::all();
+        //$data = Category::all();
         return view('admin.product', ['datalist'=> $datalist]);
     }
 
@@ -30,6 +31,7 @@ class ProductController extends Controller
     public function create()
     {
         $datalist = Category::with('children')->get();
+        //Category::where('parent_id',0)->get();
         return view('admin.product_add',['datalist'=> $datalist]);
     }
 

@@ -8,8 +8,8 @@
         <label class="form-label">Parent</label>
         <select class="form-control" name="parent_id">
             @foreach ($datalist as $rs)
-                <option value ="{{ $rs->id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif>
-                    {{App\Http\Controllers\admin\CategoryController::getParentsTree($rs, $rs->title)}}
+                <option value ="{{ $rs->id }}" @if($rs->id == $data->parent_id) selected="selected" @endif>
+                    {{ App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title) }}
                 </option>
             @endforeach
             <option value="0">Main Category</option>
