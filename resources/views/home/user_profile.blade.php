@@ -40,7 +40,7 @@
               </ul>
             </div>
             <div class="col-lg-10 pt-4 pt-lg-0">
-              @include('profile.show_changed')
+              @include('profile.show')
             </div>
           </div>
   

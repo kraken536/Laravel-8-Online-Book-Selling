@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home Login Panel</title>
+    <title>Admin Login Panel</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets')}}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form action ="{{ route('loginHomeCheck') }}" method="post" class="user">
+                                    <form action ="{{ route('admin_logincheck') }}" method="post" class="user">
                                         @csrf
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
@@ -71,10 +71,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="#">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="{{route('register')}}">Create an Account!</a>
+                                        <a class="small" href="{{ Route('admin_reset') }}">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>

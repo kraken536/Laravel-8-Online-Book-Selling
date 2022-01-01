@@ -72,4 +72,8 @@ class HomeController extends Controller
             return view('home.loginHome');
         }
     }
+    public function register(){
+        return view('auth.register');
+    }
+
 }

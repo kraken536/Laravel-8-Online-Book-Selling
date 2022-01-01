@@ -22,13 +22,27 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('layouts._home');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+//USER routes
+Route::middleware('auth')->prefix('myaccount')->group(function(){
+    Route::get('/',[UserController::class,'index'])->name('profile');
+});
+
+
+
+//Register in routes 
+Route::get('/register',[HomeController::class,'register'])->name('register');
 
 
 //Admin routes
@@ -99,7 +113,7 @@ Route::prefix('image')->group(function(){
 Route::get('setting',[SettingController::class,'index'])->name('admin_setting');
 Route::post('setting/update',[SettingController::class,'update'])->name('admin_setting_update');
 
-//USER routes
-Route::middleware('auth')->prefix('myaccount')->group(function(){
-    Route::get('/',[UserController::class,'index'])->name('profile');
+
+Route::middleware('auth')->prefix('user')->group(function(){
+    Route::get('profile',[UserController::class,'index'])->name('profile.show');
 });
