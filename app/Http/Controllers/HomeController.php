@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Setting;
+use App\Models\Message;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
@@ -74,6 +75,19 @@ class HomeController extends Controller
     }
     public function register(){
         return view('auth.register');
+    }
+
+    public function message(Request $request){
+        $data = new Message();
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+        $data->status = 'New';
+        $data->save();
+
+        return redirect()->route('contact')->with('success', 'The message has been sent successfully.');
     }
 
 }

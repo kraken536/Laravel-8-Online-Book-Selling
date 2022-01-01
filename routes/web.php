@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ImageController;
 use App\Http\Controllers\admin\SettingController;
+use App\Http\Controllers\admin\MessageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 
@@ -74,6 +75,7 @@ Route::get('/references',[HomeController::class,'references'])->name('references
 Route::get('home/logoutHome',[HomeController::class,'logoutHome'])->name('logout_home');
 Route::get('loginHome',[HomeController::class, 'homeLogin'])->name('loginHome');
 Route::post('home/loginHome',[HomeController::class, 'loginCheck'])->name('loginHomeCheck');
+Route::post('/sendmessage',[HomeController::class,'message'])->name('send_message');
 
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){
@@ -98,6 +100,18 @@ Route::prefix('product')->group(function(){
     Route::get('edit/{id}', [ProductController::class,'edit'])->name('admin_product_edit');
     Route::post('update/{id}', [ProductController::class,'update'])->name('admin_product_update');
     Route::get('delete/{id}', [ProductController::class,'destroy'])->name('admin_product_delete');
+});
+
+//Admin message Route
+Route::prefix('messages')->group(function(){
+
+    Route::get('/',[MessageController::class,'index'])->name('admin_message');
+//     Route::get('add', [MessageController::class,'create'])->name('admin_message_add');
+//     Route::post('store', [MessageController::class,'store'])->name('admin_message_store');
+    Route::get('edit/{id}', [MessageController::class,'edit'])->name('admin_message_edit');
+    Route::post('update/{id}', [MessageController::class,'update'])->name('admin_message_update');
+    Route::get('delete/{id}', [MessageController::class,'destroy'])->name('admin_message_delete');
+        // Route::get('show', [MessageController::class,'destroy'])->name('admin_message_delete');
 });
 
 //Image Route Controller/Product Route

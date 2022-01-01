@@ -39,6 +39,11 @@
             <span>Products</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_message')}}">
+            <i class="fas fa-envelope fa-fw"></i>
+            <span>Contact Massages</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_setting')}}">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Settings</span>

@@ -132,6 +132,6 @@ class ProductController extends Controller
         $data = Product::find($id);
         $data->delete();
 
-        return redirect()->route('admin_product');
+        return redirect()->route('admin_product')->with('success', 'Record deleted successfully.');
     }
 }

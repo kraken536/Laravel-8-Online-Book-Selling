@@ -128,6 +128,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         DB::table('categories')->where('id', $id)->delete();
-        return redirect()->route('admin_category');
+        return redirect()->route('admin_category')->with('success', 'Record deleted successfully.');;
     }
 }
