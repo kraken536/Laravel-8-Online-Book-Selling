@@ -55,7 +55,7 @@
         <ul>
           <li><a href="{{route('homepage')}}" class='active'>Home</a></li>
           @include('home._category')
-          <li><a href="{{route('aboutus')}}">About</a></li>
+          <li><a href="{{route('aboutus')}}">About Us</a></li>
           <li><a href="{{route('references')}}">References</a></li>
           {{-- <li><a href="pricing.html">Pricing</a></li> --}}
           <li><a href="{{route('faq')}}">FAQ</a></li>
