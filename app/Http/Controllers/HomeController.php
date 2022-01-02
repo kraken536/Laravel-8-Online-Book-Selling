@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Setting;
 use App\Models\Message;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
@@ -18,10 +19,12 @@ class HomeController extends Controller
     public static function getSetting(){
         return Setting::first();
     }
+    
 
     public function index(){
 
-        return view('layouts._home');
+        $slider = Product::select('title','image','price')->limit(4)->get();
+        return view('layouts._home', ['slider' => $slider]);
     }
 
     public function aboutus(){

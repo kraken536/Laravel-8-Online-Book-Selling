@@ -4,19 +4,29 @@
        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
  
        <div class="carousel-inner" role="listbox">
- 
+         @php
+           $counter = 1;
+         @endphp
+        @foreach ($slider as $rs)
+        {{-- url('{{asset('assets/home/assets/img/slide/slide-1.jpg')}}') --}}
          <!-- Slide 1 -->
-         <div class="carousel-item active" style="background-image: url('{{asset('assets/home/assets/img/slide/slide-1.jpg')}}')">
+         @if($rs->image)
+         <div class="carousel-item @if ($counter == 1) active @endif" style="background-image: url('{{ Storage::url($rs->image) }}')">
+          @php
+            $counter+=1;
+          @endphp
            <div class="carousel-container">
              <div class="container">
                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
-               <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+               <p class="animate__animated animate__fadeInUp">{{$rs->title}}</p>
                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
              </div>
            </div>
          </div>
+         @endif
+        @endforeach
  
-         <!-- Slide 2 -->
+         {{-- <!-- Slide 2 -->
          <div class="carousel-item" style="background-image: url('{{asset('assets/home/assets/img/slide/slide-2.jpg')}}')">
            <div class="carousel-container">
              <div class="container">
@@ -25,9 +35,9 @@
                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
              </div>
            </div>
-         </div>
+         </div> --}}
  
-         <!-- Slide 3 -->
+         {{-- <!-- Slide 3 -->
          <div class="carousel-item" style="background-image: url('{{asset('assets/home/assets/img/slide/slide-3.jpg')}}')">
            <div class="carousel-container">
              <div class="container">
@@ -36,7 +46,7 @@
                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
              </div>
            </div>
-         </div>
+         </div> --}}
  
        </div>
  
