@@ -93,4 +93,11 @@ class HomeController extends Controller
         return redirect()->route('contact')->with('success', 'The message has been sent successfully.');
     }
 
+    public function categoryproduct($id){
+        $datalist = Product::where('category_id',$id)->get();
+        $list = Category::find($id);
+        //print_r($datalist);exit();
+        return view('home._categoryproduct',['id'=>$id, 'datalist'=>$datalist, 'list'=>$list]);
+    }
+
 }

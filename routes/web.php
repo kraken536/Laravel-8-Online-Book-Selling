@@ -76,6 +76,7 @@ Route::get('home/logoutHome',[HomeController::class,'logoutHome'])->name('logout
 Route::get('loginHome',[HomeController::class, 'homeLogin'])->name('loginHome');
 Route::post('home/loginHome',[HomeController::class, 'loginCheck'])->name('loginHomeCheck');
 Route::post('/sendmessage',[HomeController::class,'message'])->name('send_message');
+Route::get('/categoryproducts/{id}',[HomeController::class,'categoryproduct'])->name('category_products');
 
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){
