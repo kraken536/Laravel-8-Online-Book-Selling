@@ -23,11 +23,11 @@ use App\Http\Controllers\UserController;
 |
 */
 
-
-Route::get('/', function () {
-    // return view('welcome');
-    return view('layouts._home');
-});
+// Route::get('/', function () {
+//     // return view('welcome');
+//     return view('layouts._home');
+// });
+Route::get('/', [HomeController::class,'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -77,6 +77,8 @@ Route::get('loginHome',[HomeController::class, 'homeLogin'])->name('loginHome');
 Route::post('home/loginHome',[HomeController::class, 'loginCheck'])->name('loginHomeCheck');
 Route::post('/sendmessage',[HomeController::class,'message'])->name('send_message');
 Route::get('/categoryproducts/{id}',[HomeController::class,'categoryproduct'])->name('category_products');
+Route::get('/products/{id}',[HomeController::class,'product_details'])->name('product_detail');
+Route::get('/addtoCart/{id}',[HomeController::class, 'add_to_cart'])->name('addToCart');
 
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){

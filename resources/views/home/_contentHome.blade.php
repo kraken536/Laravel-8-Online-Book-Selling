@@ -11,18 +11,18 @@
         {{-- url('{{asset('assets/home/assets/img/slide/slide-1.jpg')}}') --}}
          <!-- Slide 1 -->
          @if($rs->image)
-         <div class="carousel-item @if ($counter == 1) active @endif" style="background-image: url('{{ Storage::url($rs->image) }}')">
-          @php
-            $counter+=1;
-          @endphp
-           <div class="carousel-container">
-             <div class="container">
-               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
-               <p class="animate__animated animate__fadeInUp">{{$rs->title}}</p>
-               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-             </div>
-           </div>
-         </div>
+          <div class="carousel-item @if ($counter == 1) active @endif" style="background-image: url('{{ Storage::url($rs->image) }}')">
+            @php
+              $counter=2;
+            @endphp
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
+                <p class="animate__animated animate__fadeInUp">{{$rs->title}}</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              </div>
+            </div>
+          </div>
          @endif
         @endforeach
          
@@ -70,6 +70,252 @@
  
        </div>
      </section><!-- End About Section -->
+
+     <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="text align: center">Daily Products</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row portfolio-container">
+          @php
+              $counter=1;
+          @endphp 
+          @foreach ($daily as $rs)
+              @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                  <div class="portfolio-wrap">
+                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
+                    <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>App</p>
+                      <div class="portfolio-links">
+                        <a href="{{Route('addToCart',['id'=>$rs->id])}}" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}"class="" title="Product Details"><i class="bx bx-link"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 @php
+                  $counter++;    
+                 @endphp            
+          @elseif ($counter == 2)
+              
+              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div class="portfolio-wrap">
+                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
+                  <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>Web</p>
+                      <div class="portfolio-links">
+                      <a href="" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                      <a href="" class="" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+
+              @php
+                  $counter++;    
+              @endphp
+          @elseif ($counter == 3)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
+                <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{$rs->title}}</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a href="" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                    <a href="" class="" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+              @php
+                  $counter=1;    
+              @endphp
+          @endif
+          @endforeach
+      
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="text align: center">Last Products</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row portfolio-container">
+          @php
+              $counter=1;
+          @endphp 
+          @foreach ($last as $rs)
+              @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                  <div class="portfolio-wrap">
+                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
+                    <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>App</p>
+                      <div class="portfolio-links">
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                        <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 @php
+                  $counter++;    
+                 @endphp            
+          @elseif ($counter == 2)
+              
+              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div class="portfolio-wrap">
+                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
+                  <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>Web</p>
+                      <div class="portfolio-links">
+                      <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                      <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+
+              @php
+                  $counter++;    
+              @endphp
+          @elseif ($counter ==3)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
+                <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{$rs->title}}</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              @php
+                  $counter=1;    
+              @endphp
+          @endif
+
+          @endforeach
+      
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="text align: center">Picked For You Products</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row portfolio-container">
+          @php
+              $counter=1;
+          @endphp 
+          @foreach ($picked as $rs)
+              @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                  <div class="portfolio-wrap">
+                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
+                    <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>App</p>
+                      <div class="portfolio-links">
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                        <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 @php
+                  $counter++;    
+                 @endphp            
+          @elseif ($counter == 2)
+              
+              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div class="portfolio-wrap">
+                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
+                  <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                      <h4>{{$rs->title}}</h4>
+                      <p>Web</p>
+                      <div class="portfolio-links">
+                      <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                      <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+
+              @php
+                  $counter++;    
+              @endphp
+          @elseif ($counter ==3)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
+                <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{$rs->title}}</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              @php
+                  $counter=1;    
+              @endphp
+          @endif
+
+          @endforeach
+      
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
  
      <!-- ======= Clients Section ======= -->
      <section id="clients" class="clients section-bg">

@@ -86,6 +86,11 @@
   <!-- Template Main JS File -->
   <script src="{{ asset('assets') }}/home/assets/js/main.js"></script>
 
+
+{{-- extra --}}
+
+
+
 </body>
 
 </html>

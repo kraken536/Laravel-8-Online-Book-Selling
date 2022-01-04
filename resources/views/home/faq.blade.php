@@ -144,7 +144,6 @@
     <!-- ======= Our Skills Section ======= -->
     <section id="skills" class="skills">
       <div class="container">
-
         <div class="section-title">
           <h2>Our Skills</h2>
           <p>Check our Our Skills</p>
@@ -153,7 +152,6 @@
         <div class="row skills-content">
 
           <div class="col-lg-6">
-
             <div class="progress">
               <span class="skill">HTML <i class="val">100%</i></span>
               <div class="progress-bar-wrap">

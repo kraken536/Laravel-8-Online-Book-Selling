@@ -23,8 +23,12 @@ class HomeController extends Controller
 
     public function index(){
 
-        $slider = Product::select('title','image','price')->limit(4)->get();
-        return view('layouts._home', ['slider' => $slider]);
+        $slider = Product::select('title','image','price','id')->limit(4)->get();
+        $daily = Product::select('title','image','price','id')->inRandomOrder()->limit(3)->get();
+        $last = Product::select('title','image','price','id')->OrderByDesc('id')->limit(3)->get();
+        $picked = Product::select('title','image','price','id')->inRandomOrder()->limit(3)->get();
+        // print_Kr($last);exit();
+        return view('layouts._home', ['slider' => $slider, 'daily' => $daily, 'last'=>$last, 'picked'=>$picked]);
     }
 
     public function aboutus(){
@@ -98,6 +102,16 @@ class HomeController extends Controller
         $list = Category::find($id);
         //print_r($datalist);exit();
         return view('home._categoryproduct',['id'=>$id, 'datalist'=>$datalist, 'list'=>$list]);
+    }
+
+    public function add_to_cart($id){
+        $data= Product::find($id);
+        return view('home.add_to_cart',['id'=>$id,'data'=>$data]);
+    }
+
+    public function product_details($id){
+        $data = Product::find($id);
+        return view('home.product_details',['data'=>$data]);
     }
 
 }

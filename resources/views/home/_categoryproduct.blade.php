@@ -4,7 +4,7 @@
 
 @extends('home.index')
 
-@section('title', $list->title." Category Product")
+@section('title', $list->title." Product")
 
 @section('contenu')
 <!-- ======= Breadcrumbs ======= -->
@@ -12,7 +12,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>{{$list->title}} Category Product</h2>
+        <h2>{{$list->title}} Product</h2>
         <ol>
           <li><a href="{{route('homepage')}}">Home</a></li>
           <li>Category Product</li>

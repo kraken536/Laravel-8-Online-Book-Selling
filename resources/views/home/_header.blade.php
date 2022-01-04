@@ -32,7 +32,7 @@
   <link href="{{ asset('assets') }}/home/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="{{ asset('assets') }}/home/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="{{ asset('assets') }}/home/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets') }}/home/assets/css/style.css" rel="stylesheet">
 
@@ -44,13 +44,13 @@
   ======================================================== -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-
+{{-- extra --}}
 
 
 </head>
 
 <body>
-
+@yield('search')
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
