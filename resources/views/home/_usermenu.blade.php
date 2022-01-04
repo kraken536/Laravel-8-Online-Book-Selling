@@ -1,4 +1,15 @@
-<li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i>
+@if(Auth::check())
+    @if (Auth::user()->profile_photo_path)
+        <li class="dropdown"><a href="#"><img src="{{ Storage::url(Auth::user()->profile_photo_path) }}"  style="font-size:35px" width="40">
+    @else
+        <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i>
+    @endif
+
+@else
+    <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i>
+@endif
+
+{{-- <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i> --}}
     @if(Auth::check())<i class="bi bi-chevron-down"></i>
     <span>&nbsp;&nbsp;{{ Auth::user()->name }}</span>
         <ul>
