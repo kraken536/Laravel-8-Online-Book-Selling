@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Setting;
 use App\Models\Message;
 use App\Models\Product;
+use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
@@ -111,7 +112,26 @@ class HomeController extends Controller
 
     public function product_details($id){
         $data = Product::find($id);
-        return view('home.product_details',['data'=>$data]);
+        $datalist = Image::where('product_id',$id)->get();
+        return view('home.product_details',['data'=>$data, 'datalist'=>$datalist]);
     }
+
+    public function getproduct(Request $request){
+
+        $search = $request->input('search');
+        $count = Product::where('title', 'like', '%'.$search.'%')->get()->count();
+    
+        if($count== 1){
+            $data = Product::where('title', 'like', '%'.$search.'%')->first();
+            return redirect()->route('product_detail',['id'=>$data->id, 'slug'=>$data->slug]);
+        }else{
+            $data = Product::where('title', 'like', '%'.$search.'%')->first(); 
+            $list = Product::find($data->id);
+            return redirect()->route('category_products',['search'=>$search, 'id'=>$data->category_id, 'list'=>$list]);
+        }
+
+        
+    }
+
 
 }
