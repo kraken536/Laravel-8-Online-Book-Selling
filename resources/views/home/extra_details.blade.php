@@ -2,19 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Product Detail Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {{-- <link rel="apple-touch-icon" href="{{ asset('assets') }}/extra/assets/img/apple-icon.png">  --}}
-    {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets') }}/extra/assets/img/favicon.ico">  --}}
-
-    {{-- <link rel="stylesheet" href="{{ asset('assets') }}/extra/assets/css/bootstrap.min.css"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('assets') }}/extra/assets/css/templatemo.css"> --}}
     <link rel="stylesheet" href="{{ asset('assets') }}/extra/assets/css/custom.css">
-
-    <!-- Load fonts style after rendering the layout styles -->
-    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"> --}}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="{{ asset('assets') }}/extra/assets/css/fontawesome.min.css">
 
     <!-- Slick -->
@@ -56,7 +47,8 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="{{ asset('assets') }}/extra/assets/img/product_single_10.jpg" alt="Card image cap" id="product-detail">
+                        {{-- {{ asset('assets') }}/extra/assets/img/product_single_10.jpg --}}
+                        <img class="card-img img-fluid" src="{{ Storage::url($data->image) }}" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -71,7 +63,9 @@ https://templatemo.com/tm-559-zay-shop
                         <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
                             <!--Start Slides-->
                             <div class="carousel-inner product-links-wap" role="listbox">
-
+                                @foreach ($datalist as $rs)
+                                    
+                                @endforeach
                                 <!--First slide-->
                                 <div class="carousel-item active">
                                     <div class="row">
