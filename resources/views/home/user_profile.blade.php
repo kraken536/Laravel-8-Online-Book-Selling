@@ -88,22 +88,12 @@
                     @include('profile.show')
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/features-6.png" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane active show" id="tab-6">
-                <div class="row">
-                  <div class="col-lg-10 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi bendo</h3>
-                    {{-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> --}}
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/features-1.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
+
+              
 
               <div class="tab-pane" id="tab-2">
                 <div class="row">
@@ -141,6 +131,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="tab-pane" id="tab-5">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
@@ -151,8 +142,21 @@
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/features-5.png" alt="" class="img-fluid">
                   </div>
+                </div>  
+              </div>
+
+              <div class="tab-pane" id="tab-6">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Et blanditiis nemo veritatis excepturi bendo</h3>
+                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/features-6.png" alt="" class="img-fluid">
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

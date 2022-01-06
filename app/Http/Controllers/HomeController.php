@@ -111,10 +111,10 @@ class HomeController extends Controller
     }
 
     public function product_details($id){
-        $data = Product::find($id);
+        $data_product = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
         // View::composer('home.extra_details',['data'=>$data, 'datalist'=>$datalist]);
-        return view('home.product_details',['data'=>$data, 'datalist'=>$datalist]);
+        return view('home.product_details',['data_product'=>$data_product, 'datalist'=>$datalist]);
     }
 
     public function getproduct(Request $request){
