@@ -130,8 +130,11 @@ class HomeController extends Controller
             $list = Product::find($data->id);
             return redirect()->route('category_products',['search'=>$search, 'id'=>$data->category_id, 'list'=>$list]);
         }
-
         
+    }
+
+    public function user_reviews(){
+        return view('home.review_home');
     }
 
 

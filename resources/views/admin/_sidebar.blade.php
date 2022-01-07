@@ -44,6 +44,11 @@
             <span>Contact Massages</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_review')}}">
+            <i class="fas fa-list fa-sm fa-fw "></i>
+            <span>Reviews</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_setting')}}">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Settings</span>

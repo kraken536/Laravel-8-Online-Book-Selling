@@ -45,6 +45,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 {{-- extra --}}
+@yield('css_review')
 
 
 </head>

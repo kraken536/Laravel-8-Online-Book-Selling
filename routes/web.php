@@ -40,6 +40,10 @@ Route::middleware('auth')->prefix('myaccount')->group(function(){
     Route::get('/',[UserController::class,'index'])->name('profile');
 });
 
+Route::middleware('auth')->prefix('myreviews')->group(function(){
+    Route::get('/',[HomeController::class,'user_reviews'])->name('myReviews');
+});
+
 
 
 //Register in routes 
@@ -80,7 +84,6 @@ Route::get('/categoryproducts/{id}',[HomeController::class,'categoryproduct'])->
 Route::get('/products/{id}',[HomeController::class,'product_details'])->name('product_detail');
 Route::get('/addtoCart/{id}',[HomeController::class, 'add_to_cart'])->name('addToCart');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
-// Route::get('/productsearch/{category_id}/{search}',[HomeController::class, 'product'])->name('product-search');
 
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){
@@ -94,10 +97,8 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('category/delete/{id}',[CategoryController::class,'destroy'])->name('admin_category_delete');
     Route::get('category/show',[CategoryController::class,'show'])->name('admin_category_show');
 
-});
-
-//Product Route
-Route::prefix('product')->group(function(){
+    //Product Route
+    Route::prefix('product')->group(function(){
 
     Route::get('/',[ProductController::class,'index'])->name('admin_product');
     Route::get('add', [ProductController::class,'create'])->name('admin_product_add');
@@ -108,15 +109,12 @@ Route::prefix('product')->group(function(){
 });
 
 //Admin message Route
-Route::prefix('messages')->group(function(){
+    Route::prefix('messages')->group(function(){
 
     Route::get('/',[MessageController::class,'index'])->name('admin_message');
-//     Route::get('add', [MessageController::class,'create'])->name('admin_message_add');
-//     Route::post('store', [MessageController::class,'store'])->name('admin_message_store');
     Route::get('edit/{id}', [MessageController::class,'edit'])->name('admin_message_edit');
     Route::post('update/{id}', [MessageController::class,'update'])->name('admin_message_update');
     Route::get('delete/{id}', [MessageController::class,'destroy'])->name('admin_message_delete');
-        // Route::get('show', [MessageController::class,'destroy'])->name('admin_message_delete');
 });
 
 //Image Route Controller/Product Route
@@ -127,12 +125,19 @@ Route::prefix('image')->group(function(){
     Route::get('delete/{id}/{product_id}', [ImageController::class,'destroy'])->name('admin_image_delete');
 });
 
-
 //Setting routes
 Route::get('setting',[SettingController::class,'index'])->name('admin_setting');
 Route::post('setting/update',[SettingController::class,'update'])->name('admin_setting_update');
+
+//Reviews Route::
+
+    Route::get('reviews',[AdminController::class,'review'])->name('admin_review');
+
+});
 
 
 Route::middleware('auth')->prefix('user')->group(function(){
     Route::get('profile',[UserController::class,'index'])->name('profile.show');
 });
+
+
