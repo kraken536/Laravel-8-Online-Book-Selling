@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\ImageController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\ReviewController;
 use App\Http\Controllers\admin\MessageController;
+use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 
@@ -119,7 +120,7 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('delete/{id}', [MessageController::class,'destroy'])->name('admin_message_delete');
 });
 
-//Image Route Controller/Product Route
+//Image Route Controller
 Route::prefix('image')->group(function(){
 
     Route::get('create/{product_id}', [ImageController::class,'create'])->name('admin_image_add');
@@ -139,6 +140,18 @@ Route::prefix('reviews')->group(function(){
     Route::get('show/{id}',[ReviewController::class,'show'])->name('admin_review_show');
 
     });
+
+
+    //FAQ Route
+    Route::prefix('faq')->group(function(){
+
+        Route::get('/',[FaqController::class,'index'])->name('admin_faq');
+        Route::get('add', [FaqController::class,'create'])->name('admin_faq_add');
+        Route::post('store', [FaqController::class,'store'])->name('admin_faq_store');
+        Route::get('edit/{id}', [FaqController::class,'edit'])->name('admin_faq_edit');
+        Route::post('update/{id}', [FaqController::class,'update'])->name('admin_faq_update');
+        Route::get('delete/{id}', [FaqController::class,'destroy'])->name('admin_faq_destroy');
+        });
 
 });
 

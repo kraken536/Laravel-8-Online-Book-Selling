@@ -9,8 +9,10 @@ use App\Models\Message;
 use App\Models\Product;
 use App\Models\Review;
 use App\Models\Image;
+use App\Models\Faq;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
 
 class HomeController extends Controller
 {
@@ -45,7 +47,9 @@ class HomeController extends Controller
     }
 
     public function faq(){
-        return view('home.faq');
+
+        $datalist = Faq::orderBy('position')->get();
+        return view('home.faq',['datalist' => $datalist]);
     }
 
     public function references(){

@@ -8,6 +8,19 @@
 @section('description', $data->description)
 @section('keywords', $data->keywords)
 
+@section('accordiOn')
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#accordion" ).accordion();
+} );
+</script>  
+
+@endsection
+
 @section('searchcumb')
     <div class="container">
       
@@ -53,25 +66,39 @@
       <div class="container">
 
         <div class="row content">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <h2>FAQ Page</h2>
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
-            </ul>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
+          <div class="col-lg-8 pt-4 pt-lg-0">
+
+
+
+
+            <div class="accordion" id="accordionExample">
+              @php
+                $i = 1;
+              @endphp
+              @foreach($datalist as $rs)
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{$i}}">
+                  <button class="accordion-button @if($i > 1) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$i}}" aria-expanded="@if($i == 1)true @else false @endif" aria-controls="collapse{{$i}}">
+                    <strong>{!! $rs->question !!}</strong>
+                  </button>
+                </h2>
+                <div id="collapse{{$i}}" class="accordion-collapse collapse @if($i == 1) show @endif" aria-labelledby="heading{{$i}}" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Answer:</strong> 
+                    {!! $rs->answer !!}
+                  </div>
+                </div>
+              </div>
+                @php
+                $i += 1;
+              @endphp
+              @endforeach
+            </div>
+
           </div>
         </div>
 

@@ -49,6 +49,11 @@
             <span>Reviews</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_faq')}}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>FAQ</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_setting')}}">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Settings</span>
