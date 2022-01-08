@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Setting;
 use App\Models\Message;
 use App\Models\Product;
+use App\Models\Review;
 use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -21,6 +22,13 @@ class HomeController extends Controller
         return Setting::first();
     }
     
+    public static function avg_review($id){
+        return Review::where('product_id', $id)->average('rate');
+    }
+
+    public static function count_review($id){
+        return Review::where('product_id', $id)->count();
+    }
 
     public function index(){
 
@@ -113,8 +121,10 @@ class HomeController extends Controller
     public function product_details($id){
         $data_product = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
+        $total = Review::where('product_id',$id)->count();
+        $rev = Review::where('product_id',$id)->get();
         // View::composer('home.extra_details',['data'=>$data, 'datalist'=>$datalist]);
-        return view('home.product_details',['data_product'=>$data_product, 'datalist'=>$datalist]);
+        return view('home.product_details',['data_product'=>$data_product, 'datalist'=>$datalist, 'total'=>$total, 'rev'=>$rev]);
     }
 
     public function getproduct(Request $request){
@@ -136,6 +146,13 @@ class HomeController extends Controller
     public function user_reviews(){
         return view('home.review_home');
     }
+    
+    public function save_reviews(Request $request, $id){
+
+        return redirect()->route('product_detail',['id'=>$id])->with('success', 'The review has been sent successfully.');
+    }
+
+    
 
 
 }

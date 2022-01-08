@@ -50,7 +50,4 @@ class AdminController extends Controller
         return redirect()->route('admin_login');
     }
 
-    public function review(){
-        return view('admin._review');
-    }
 }

@@ -46,6 +46,11 @@
 
 {{-- extra --}}
 @yield('css_review')
+@livewireScripts
+{{-- 
+<link href="{{ asset('assets')}}/admin/css/sb-admin-2.min.css" rel="stylesheet"> --}}
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 </head>

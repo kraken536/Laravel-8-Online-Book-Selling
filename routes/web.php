@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ImageController;
 use App\Http\Controllers\admin\SettingController;
+use App\Http\Controllers\admin\ReviewController;
 use App\Http\Controllers\admin\MessageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -41,7 +42,8 @@ Route::middleware('auth')->prefix('myaccount')->group(function(){
 });
 
 Route::middleware('auth')->prefix('myreviews')->group(function(){
-    Route::get('/',[HomeController::class,'user_reviews'])->name('myReviews');
+    Route::get('/',[UserController::class,'myreviews'])->name('myReviews');
+    Route::get('/delete/{id}',[UserController::class,'destroy_review'])->name('delete_reviews');
 });
 
 
@@ -106,7 +108,7 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('edit/{id}', [ProductController::class,'edit'])->name('admin_product_edit');
     Route::post('update/{id}', [ProductController::class,'update'])->name('admin_product_update');
     Route::get('delete/{id}', [ProductController::class,'destroy'])->name('admin_product_delete');
-});
+    });
 
 //Admin message Route
     Route::prefix('messages')->group(function(){
@@ -130,10 +132,16 @@ Route::get('setting',[SettingController::class,'index'])->name('admin_setting');
 Route::post('setting/update',[SettingController::class,'update'])->name('admin_setting_update');
 
 //Reviews Route::
+Route::prefix('reviews')->group(function(){
+    Route::get('/',[ReviewController::class,'index'])->name('admin_review');
+    Route::post('update/{id}',[ReviewController::class,'update'])->name('admin_review_update');
+    Route::get('delete/{id}',[ReviewController::class,'destroy'])->name('admin_review_destroy');
+    Route::get('show/{id}',[ReviewController::class,'show'])->name('admin_review_show');
 
-    Route::get('reviews',[AdminController::class,'review'])->name('admin_review');
+    });
 
 });
+
 
 
 Route::middleware('auth')->prefix('user')->group(function(){

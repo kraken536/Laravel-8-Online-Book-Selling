@@ -74,7 +74,7 @@
                 <a class="nav-link" data-bs-toggle="tab" href="#tab-5">My Messages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Logout</a>
+                <a  href="{{route('logout_home')}}">Logout</a>
               </li>
             </ul>
           </div>
@@ -97,7 +97,7 @@
 
               <div class="tab-pane" id="tab-2">
                 <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
+                  <div class="col-lg-10 details order-2 order-lg-1">
                     <h3>Et blanditiis nemo veritatis excepturi</h3>
                     <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
                     <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
@@ -109,11 +109,61 @@
               </div>
               <div class="tab-pane" id="tab-3">
                 <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
-                  </div>
+                  <div class="col-lg-10 details order-2 order-lg-1">
+                    <section id="about" class="about">
+                      <div class="container">
+                
+                        <div class="row content">
+                          <section id="about" class="about">
+                            <div class="container">
+                      
+                              <div class="row content">
+                                <div class="table-responsive">
+                                  <table class="table table-hover">
+                                    @include('home.flash-message')
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">Review</th>
+                                        <th scope="col">Rate</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      @foreach ($datalist as $rs)
+                                      <tr>
+                                        <td><a href="{{route('product_detail',['id'=>$rs->product_id])}}">{{$rs->product->title}}</a></td>
+                                        <td>{{$rs->subject}}</td>
+                                        <td>{{$rs->review}}</td>
+                                        <td>{{$rs->rate}}</td>
+                                        <td>{{$rs->status}}</td>
+                                        <td>{{$rs->created_at}}</td>
+                                        <td style="text-align: center"><a href="{{ route('delete_reviews',['id'=>$rs->id])}}" onclick="return confirm('Are you sure you want to delete this?')" title="Delete"><button type="button" class="btn btn-outline-danger">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                          <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                          </svg> </button></a></td><!--DELETE button -->
+                                      </tr>
+                                      @endforeach
+                                      <tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                              
+                              </div>
+                            </div>
+                      
+                          </section>
+                      
+                        
+                        </div>
+                      </div>
+                
+                    </section>
+                </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/features-3.png" alt="" class="img-fluid">
                   </div>
@@ -143,18 +193,6 @@
                     <img src="assets/img/features-5.png" alt="" class="img-fluid">
                   </div>
                 </div>  
-              </div>
-
-              <div class="tab-pane" id="tab-6">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi bendo</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/features-6.png" alt="" class="img-fluid">
-                  </div>
-                </div>
               </div>
 
             </div>

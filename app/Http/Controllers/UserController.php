@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Review;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('home.user_profile');
+        $datalist = Review::where('user_id',Auth::user()->id)->get();
+        return view('home.user_profile',['datalist' => $datalist]);
     }
 
     /**
@@ -81,5 +84,17 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    public function myreviews(){
+        $datalist = Review::where('user_id',Auth::user()->id)->get();
+        // print_r($datalist);exit();
+        return view('home.review_home',['datalist'=>$datalist]);
+    }
+
+    public function destroy_review(Review $review, $id){
+        $data = Review::find($id);
+        $data->delete();
+        return redirect()->back()->with('success', 'Review deleted.');
     }
 }
