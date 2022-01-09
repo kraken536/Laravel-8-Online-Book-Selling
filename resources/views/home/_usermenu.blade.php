@@ -32,7 +32,7 @@
     
 @else
     <li class="log" id="log"><a href="{{route('loginHome')}}" onMouseOver="this.style.color='green'"
-        onMouseOut="this.style.color='grey'"><i class="material-icons" style="color:green; font-size:35px">login</i>Login</a></li>
+        onMouseOut="this.style.color='grey'"><i class="material-icons" style="color:green; font-size:35px">login</i>Login/Register</a></li>
 @endif
 
 

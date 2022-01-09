@@ -33,6 +33,16 @@ class ImageController extends Controller
         return view('admin.image_add',['data'=>$data, 'image_list'=>$image_list]);
     }
 
+
+    public function create2($product_id)
+    {
+        $data= Product::find($product_id);
+        $image_list = Image::where('product_id', $product_id)->get();
+        
+        return view('home.product_gallery',['data'=>$data, 'image_list'=>$image_list]);
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -51,6 +61,20 @@ class ImageController extends Controller
         $data->save();
 
         return redirect()->route('admin_image_add',['product_id'=>$product_id]);
+    }
+
+    public function store2(Request $request, $product_id)
+    {
+        $data = new Image;
+
+        $data->title = $request->input('title');
+        $data->product_id = $product_id;
+        if($request->hasFile('image')){
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
+        $data->save();
+
+        return redirect()->route('user_image_add',['product_id'=>$product_id]);
     }
 
     /**
@@ -108,5 +132,13 @@ class ImageController extends Controller
         $data->delete();
 
         return redirect()->route('admin_image_add', ['product_id'=>$product_id]);
+    }
+
+    public function destroy2(Image $image, $id, $product_id)
+    {
+        $data = Image::find($id);
+        $data->delete();
+
+        return redirect()->route('user_image_add', ['product_id'=>$product_id]);
     }
 }

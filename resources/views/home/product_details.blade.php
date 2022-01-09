@@ -431,14 +431,6 @@ https://templatemo.com/tm-559-zay-shop
           </div>
         </div>
         @endforeach
-
-
-            @foreach ($rev as $txt)
-            {{-- <div>
-              <h5>{{$txt->subject}}</h5>
-              <p class="fst-italic">{{$txt->review}}</p>
-            </div> --}}
-            @endforeach
           </div>
 
           <div class="col-lg-4 pt-4 pt-lg-0">             

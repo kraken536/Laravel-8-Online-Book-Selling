@@ -98,7 +98,7 @@ class HomeController extends Controller
     }
 
     public function message(Request $request){
-        $data = new Message();
+        $data = new Message;
         $data->name = $request->input('name');
         $data->email = $request->input('email');
         $data->phone = $request->input('phone');

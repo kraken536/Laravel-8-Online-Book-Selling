@@ -45,20 +45,22 @@ class CategoryController extends Controller
     
     public function create(Request $request)
     {
-        DB::table('categories')->insert([
-            'parent_id' => $request->input('parent_id'),
-            'title' => $request->input('title'),
-            'keywords' => $request->input('keywords'),
-            'description' => $request->input('description'),
-            'slug' => $request->input('slug'),
-            'status' => $request->input('status')
-        ]);
-        return redirect()->route('admin_category');
+
+        $data = new Category;
+
+        $data->parent_id = $request->input('parent_id');
+        $data->title = $request->input('title');
+        $data->keywords = $request->input('keywords');
+        $data->description = $request->input('description');
+        $data->slug = $request->input('slug');
+        $data->status = $request->input('status');
+        $data->save();
+
+        return redirect()->route('admin_category')->with('success', 'Category Added Successfully.');
     }
 
     public function add(){
         $datalist = Category::with('children')->get();
-        //DB::table('categories')->get()->where('parent_id',0);
         return view('admin.category_add',['datalist'=> $datalist]);
     }
 
@@ -107,16 +109,18 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //DB::table('categories')->where('id', $id)->update(['votes' => 1]);
-        DB::table('categories')->where('id', $id)->update([
-            'parent_id' => $request->input('parent_id'),
-            'title' => $request->input('title'),
-            'keywords' => $request->input('keywords'),
-            'description' => $request->input('description'),
-            'slug' => $request->input('slug'),
-            'status' => $request->input('status')
-        ]);
-        return redirect()->route('admin_category');
+
+        $data = Category::find($id);
+
+        $data->parent_id = $request->input('parent_id');
+        $data->title = $request->input('title');
+        $data->keywords = $request->input('keywords');
+        $data->description = $request->input('description');
+        $data->slug = $request->input('slug');
+        $data->status = $request->input('status');
+        $data->save();
+
+        return redirect()->route('admin_category')->with('success', 'Record Updated Successfully.');
     }
 
     /**
@@ -127,7 +131,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('categories')->where('id', $id)->delete();
+
+        $data = Category::find($id);
+        $data->delete();
+
         return redirect()->route('admin_category')->with('success', 'Record deleted successfully.');;
     }
 }

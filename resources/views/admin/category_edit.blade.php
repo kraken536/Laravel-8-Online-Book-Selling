@@ -2,6 +2,7 @@
 
 
 @section('contents')
+@include('home.flash-message')
 <form action ="{{ route('admin_category_update', ['id' => $data->id]) }}" method ="post">
     @csrf
     <div class="mb-3">

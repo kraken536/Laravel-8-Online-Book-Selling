@@ -52,6 +52,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">@yield('card_title') </h6>
                         </div>
                         <div class="card-body">
+                            @include('home.flash-message')
                             <div class="table-responsive">
                                 @yield('contents')
                             </div>

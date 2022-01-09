@@ -61,7 +61,7 @@ class ProductController extends Controller
         }
         $data->save();
 
-        return redirect()->route('admin_product');
+        return redirect()->route('admin_product')->with('success', 'Product Added Successfully.');
     }
 
     /**
@@ -118,7 +118,7 @@ class ProductController extends Controller
         
         $data->save();    
 
-        return redirect()->route('admin_product');
+        return redirect()->route('admin_product')->with('success', 'Product Updated Successfully.');;
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Review;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class UserController extends Controller
     public function index()
     {
         $datalist = Review::where('user_id',Auth::user()->id)->get();
-        return view('home.user_profile',['datalist' => $datalist]);
+        $productlist = Product::where('user_id',Auth::user()->id)->get();
+        return view('home.user_profile',['datalist' => $datalist, 'productlist' => $productlist]);
     }
 
     /**
@@ -88,7 +90,6 @@ class UserController extends Controller
 
     public function myreviews(){
         $datalist = Review::where('user_id',Auth::user()->id)->get();
-        // print_r($datalist);exit();
         return view('home.review_home',['datalist'=>$datalist]);
     }
 
