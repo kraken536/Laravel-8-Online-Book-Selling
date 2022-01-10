@@ -127,6 +127,7 @@ class HomeController extends Controller
         $datalist = Image::where('product_id',$id)->get();
         $total = Review::where('product_id',$id)->count();
         $rev = Review::where('product_id',$id)->get();
+        
         // View::composer('home.extra_details',['data'=>$data, 'datalist'=>$datalist]);
         return view('home.product_details',['data_product'=>$data_product, 'datalist'=>$datalist, 'total'=>$total, 'rev'=>$rev]);
     }

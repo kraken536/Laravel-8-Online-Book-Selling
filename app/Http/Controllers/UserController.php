@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Review;
 use App\Models\Product;
+use App\Models\ShopCart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,8 @@ class UserController extends Controller
     {
         $datalist = Review::where('user_id',Auth::user()->id)->get();
         $productlist = Product::where('user_id',Auth::user()->id)->get();
-        return view('home.user_profile',['datalist' => $datalist, 'productlist' => $productlist]);
+        $cartlist = ShopCart::where('user_id', Auth::id())->get();
+        return view('home.user_profile',['datalist' => $datalist, 'productlist' => $productlist,'cartlist' => $cartlist]);
     }
 
     /**

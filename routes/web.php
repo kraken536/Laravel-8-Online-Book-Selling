@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\MessageController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ShopCartController;
 use App\Http\Controllers\ProductUserController;
 
 
@@ -161,6 +162,16 @@ Route::prefix('reviews')->group(function(){
 
 Route::middleware('auth')->prefix('user')->group(function(){
     Route::get('profile',[UserController::class,'index'])->name('profile.show');
+    //ShopCart routes
+    Route::prefix('shopcart')->group(function(){
+
+        Route::get('/',[ShopCartController::class,'index'])->name('user_shopcart');
+        // Route::get('add', [ShopCartController::class,'show'])->name('user_shopcart_add');
+        Route::post('store/{id}', [ShopCartController::class,'store'])->name('user_shopcart_add');
+        // Route::get('edit/{id}', [ShopCartController::class,'edit'])->name('user_shopcart_edit');
+        Route::post('update/{id}', [ShopCartController::class,'update'])->name('user_shopcart_update');
+        Route::get('delete/{id}', [ShopCartController::class,'destroy'])->name('user_shopcart_delete');
+    });
 });
 
  //User Product Route
@@ -177,3 +188,5 @@ Route::middleware('auth')->prefix('user-product')->group(function(){
     Route::post('image/store/{product_id}', [ImageController::class,'store2'])->name('user_image_store');
     Route::get('image/delete/{id}/{product_id}', [ImageController::class,'destroy2'])->name('user_image_delete');
     });
+
+    

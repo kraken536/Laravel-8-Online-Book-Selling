@@ -51,6 +51,10 @@ h1 { font-size: 1.5em; margin: 10px; }
 .rate > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 
 
+
+
+
+
 </style>
 
 @endsection
@@ -225,26 +229,44 @@ https://templatemo.com/tm-559-zay-shop
                 <!-- col end -->
                 <div class="col-lg-7 mt-5">
                     <div class="card">
+                      @include('home.flash-message')
                         <div class="card-body">
-                          <h5>Title:</h5>
-                          <h1 class="h2"> {{$data_product->title}}</h1>
-                          <h1 class="h2"></h1>
-                          <h1 class="h2"></h1>
-                          <h5>Price:</h5>
-                            <p class="h3 py-2">{{$data_product->price}} ₺</p>
-
-                            <form action="" method="POST">
+                          <ul class="list-inline pb-3">
+                            <li class="list-inline-item text-right">
+                              <h5><strong>Title:</strong> &nbsp;&nbsp;{{$data_product->title}}</h5>
+                            </li>
+                            <br />
+                            <li class="list-inline-item text-right">
+                              <h5><strong>Price:</strong>&nbsp;&nbsp;{{$data_product->price}} ₺</h5>
+                            </li>
+                            <br />
+                            <li class="list-inline-item text-right">
+                             
+                                
+                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span> 
+                                
+                                  <h5><strong>Review:</strong>&nbsp;</h5>
+                            </li>
+                            <br>
+                            <li class="list-inline-item text-right">
+                              <h5><strong>Availability:</strong>&nbsp;&nbsp;In stock</h5>
+                            </li>
+                          </ul>
+                            <form action="{{route('user_shopcart_add',['id'=>$data_product->id])}}" method="POST">
+                              @csrf
                                 <input type="hidden" name="product-title" value="Activewear">
                                 <div class="row">
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
-                                                Quantity
-                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                              <h5>Quantity:
+                                                <input type="number" name="quantity" id="product-quanity" value="1" min="1" max="{{$data_product->quantity}}">
+                                              </h5>
                                             </li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -365,7 +387,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="tab-pane active show" id="tab-1">
                   <div class="row">
                     <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Architecto ut aperiam autem id</h3>
+                      {!! $data_product->description !!}
                       <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
                       <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
                     </div>
@@ -377,7 +399,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="tab-pane" id="tab-2">
                   <div class="row">
                     <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Et blanditiis nemo veritatis excepturi</h3>
+                      {!! $data_product->details !!}
                       <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
                       <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
                     </div>
