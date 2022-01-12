@@ -90,20 +90,50 @@
                 </div>
               </div>
 
-              
-
               <div class="tab-pane" id="tab-2">
                 <div class="row">
-                  <div class="col-lg-10 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/features-2.png" alt="" class="img-fluid">
-                  </div>
+                  <div class="col-lg-12 details order-2 order-lg-1">
+                    <table class="table table-hover">
+                      @include('home.flash-message')
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Address</th>
+                          <th scope="col">Total</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @php
+                          $total = 0;
+                        @endphp
+                        @foreach ($orderlist as $rs)
+                        <tr>
+                          <td style=" padding-top: 40px;">{{$rs->id}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->name}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->phone}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->email}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->address}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->total}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->created_at}}</td>
+                          <td style=" padding-top: 40px;">{{$rs->status}}</td>
+                          <td style="text-align: center; padding-top: 30px"><a href="{{ route('user_product_edit', ['id' => $rs->id]) }}" alt="Report" title="Report" ><img src="{{ asset('assets')}}/report.png" width="35"></a></td><!--EDIT button -->
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                </div>
+                  
                 </div>
               </div>
+
+
+
               <div class="tab-pane" id="tab-3">
                 <div class="row">
                   <div class="col-lg-12 details order-2 order-lg-1">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Review;
+use App\Models\Order;
+use App\Models\OrderProduct;
 use App\Models\Product;
 use App\Models\ShopCart;
 use Illuminate\Support\Facades\Auth;
@@ -18,10 +20,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
-        $productlist = Product::where('user_id',Auth::user()->id)->get();
+        $datalist = Review::where('user_id',Auth::id())->get();
+        $productlist = Product::where('user_id',Auth::id())->get();
         $cartlist = ShopCart::where('user_id', Auth::id())->get();
-        return view('home.user_profile',['datalist' => $datalist, 'productlist' => $productlist,'cartlist' => $cartlist]);
+        $orderlist = Order::where('user_id', Auth::id())->get();
+        return view('home.user_profile',[
+            'datalist' => $datalist, 
+            'productlist' => $productlist,
+            'cartlist' => $cartlist,
+            'orderlist' => $orderlist
+        ]);
     }
 
     /**

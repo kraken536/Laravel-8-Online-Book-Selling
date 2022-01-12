@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body bgcolor="#f0f1f4">
+        <div id="sarawa">
+        <div class="channel">
+        <a id="1" class="" href="/?01">Tv 1</a>
+        <a id="2" class=" active" href="/?02">Tv 2</a>
+        <a id="3" class="" href="/?03">Tv 3</a>
+        <a id="4" class="" href="/?04">Tv 4</a>
+        <a id="5" class="" href="/?05">Tv 5</a>
+        <a id="6" class="" href="/?06">Tv 6</a>
+        </div>
+        </div>
+        <div class="tv">
+        <div class="block1">
+        <iframe width="850" height="480" class="frame" frameborder="1" scrolling="no" allowfullscreen="" src="http://qanat.tv/2"></iframe>
+        </div>
+        <script type="text/javascript">
+        
+            var shewa = window.location.search;
+        
+            str = shewa;
+            
+            dir = str.slice(0, 1);
+        
+            if (dir != '?')
+            {
+            window.location.href = "?01" ;
+            }
+            
+            rega = str.slice(2,);
+            
+            
+            var gas = "http://qanat.tv/" + rega;
+            
+            document.getElementsByTagName("iframe")[0].setAttribute("src", gas);
+            
+            document.getElementById(rega).className += " active";
+            
+        </script>
+        </div>
+    </body>
+</html>

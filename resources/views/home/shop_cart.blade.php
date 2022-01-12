@@ -116,8 +116,13 @@
                   <tr>
                     <th colspan="3"></th>
                     <th></th>
-                    <td colspan="2">    <a href="#"><button type="button" class="btn btn-danger">Place Order</button></a>
-                    </td>
+                    <td colspan="2">
+                      <form action="{{route('user_order_add')}}" method="post" enctype="multipart/form-data">  
+                        @csrf 
+                        <input type="number" name="total" value="{{$total}}" hidden>
+                        <button type="submit" class="btn btn-danger">Place Order</button>
+                      </form>
+                      </td>
                   </tr>
                 </tfoot>
               </table>

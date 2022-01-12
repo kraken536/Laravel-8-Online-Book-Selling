@@ -8,12 +8,10 @@
 @else
     <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i>
 @endif
-
-{{-- <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i> --}}
     @if(Auth::check())<i class="bi bi-chevron-down"></i>
     <span>&nbsp;&nbsp;{{ Auth::user()->name }}</span>
         <ul>
-            <li><a href="{{route('profile')}}" onMouseOver="this.style.color='blue'"
+            <li style="margin-top: -3.2em"><a href="{{route('profile')}}" onMouseOver="this.style.color='blue'"
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/useri2.png" width="35">My Account</a></li>
             <li><a href="{{route('myReviews')}}" onMouseOver="this.style.color='blue'"
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/message.png" width="35">My Reviews</a></li>
