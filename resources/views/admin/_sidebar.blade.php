@@ -54,6 +54,25 @@
             <span>FAQ</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+            aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Orders</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Orders:</h6>
+                <a class="collapse-item" href="{{route('admin_order')}}">All Orders</a>
+                <a class="collapse-item" href="{{route('admin_order_list_new',['status','New'])}}">New Orders</a>
+                <a class="collapse-item" href="{{route('admin_order_list_accepted',['status','Accepted'])}}">Accepted Orders</a>
+                <a class="collapse-item" href="{{route('admin_order_list_cancelled',['status','Cancelled'])}}">Cancelled Orders</a>
+                <a class="collapse-item" href="{{route('admin_order_list_shipping',['status','Shipping'])}}">Shipping Orders</a>
+                <a class="collapse-item" href="{{route('admin_order_list_completed',['status','Completed'])}}">Completed Orders</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_setting')}}">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Settings</span>

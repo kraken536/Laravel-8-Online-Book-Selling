@@ -60,7 +60,7 @@ class ImageController extends Controller
         }
         $data->save();
 
-        return redirect()->route('admin_image_add',['product_id'=>$product_id]);
+        return redirect()->route('admin_image_add',['product_id'=>$product_id])->with('success', 'Image Added Successfully.');
     }
 
     public function store2(Request $request, $product_id)
@@ -74,7 +74,7 @@ class ImageController extends Controller
         }
         $data->save();
 
-        return redirect()->route('user_image_add',['product_id'=>$product_id]);
+        return redirect()->route('user_image_add',['product_id'=>$product_id])->with('success', 'Image Added Successfully.');
     }
 
     /**
@@ -131,7 +131,7 @@ class ImageController extends Controller
         $data = Image::find($id);
         $data->delete();
 
-        return redirect()->route('admin_image_add', ['product_id'=>$product_id]);
+        return redirect()->route('admin_image_add', ['product_id'=>$product_id])->with('success', 'Image Removed Successfully.');
     }
 
     public function destroy2(Image $image, $id, $product_id)
@@ -139,6 +139,6 @@ class ImageController extends Controller
         $data = Image::find($id);
         $data->delete();
 
-        return redirect()->route('user_image_add', ['product_id'=>$product_id]);
+        return redirect()->route('user_image_add', ['product_id'=>$product_id])->with('success', 'Image Removed Successfully.');
     }
 }

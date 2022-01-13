@@ -158,6 +158,24 @@ Route::prefix('reviews')->group(function(){
         Route::get('delete/{id}', [FaqController::class,'destroy'])->name('admin_faq_destroy');
         });
 
+        //Admin Order Route
+    Route::prefix('order')->group(function(){
+
+        Route::get('/',[App\Http\Controllers\admin\OrderController::class,'index'])->name('admin_order');
+        Route::get('/show',[App\Http\Controllers\admin\OrderController::class,'show'])->name('admin_order_show');
+        Route::get('/list-new/{status}',[App\Http\Controllers\admin\OrderController::class,'list_new'])->name('admin_order_list_new');
+        Route::get('/list-Cancelled/{status}',[App\Http\Controllers\admin\OrderController::class,'list_cancelled'])->name('admin_order_list_cancelled');
+        Route::get('/list-shipping/{status}',[App\Http\Controllers\admin\OrderController::class,'list_shipping'])->name('admin_order_list_shipping');
+        Route::get('/list-accepted/{status}',[App\Http\Controllers\admin\OrderController::class,'list_accepted'])->name('admin_order_list_accepted');
+        Route::get('/list-completed/{status}',[App\Http\Controllers\admin\OrderController::class,'list_completed'])->name('admin_order_list_completed');
+        Route::post('add', [App\Http\Controllers\admin\OrderController::class,'create'])->name('admin_order_add');
+        Route::post('store', [App\Http\Controllers\admin\OrderController::class,'store'])->name('admin_order_store');
+        Route::get('edit/{id}', [App\Http\Controllers\admin\OrderController::class,'edit'])->name('admin_order_edit');
+        Route::post('item-update/{id}', [App\Http\Controllers\admin\OrderController::class,'item_update'])->name('admin_order_item_update');
+        Route::post('update/{id}', [App\Http\Controllers\admin\OrderController::class,'update'])->name('admin_order_update');
+        Route::get('delete/{id}', [App\Http\Controllers\admin\OrderController::class,'destroy'])->name('admin_order_delete');
+        });
+
 });
 
 
