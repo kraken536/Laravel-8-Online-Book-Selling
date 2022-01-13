@@ -93,10 +93,10 @@
               <div class="tab-pane active show" id="tab-2">
                 <div class="row">
                   <div class="col-lg-12 details order-2 order-lg-1">
-                    @include('home.flash-message')
+                    
                     <table class="table table-hover">
-                     
-                      <thead>
+                      @include('home.flash-message')
+                      @livewireScripts  <thead>
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">Name</th>
@@ -123,7 +123,12 @@
                           <td style=" padding-top: 40px;">{{$rs->total}}</td>
                           <td style=" padding-top: 40px;">{{$rs->created_at}}</td>
                           <td style=" padding-top: 40px;">{{$rs->status}}</td>
-                          <td style="text-align: center; padding-top: 30px"><a href="{{ route('user_product_edit', ['id' => $rs->id]) }}" alt="Report" title="Report" ><img src="{{ asset('assets')}}/report.png" width="35"></a></td><!--EDIT button -->
+                          <td style="text-align: center; padding-top: 30px">
+                            <a href="{{ route('user_order_edit', ['id' => $rs->id]) }}" alt="Report" title="Report" >
+                              <img src="{{ asset('assets')}}/report.png" width="35">
+                            </a>
+                          </td>
+                          <!--EDIT button -->
                         </tr>
                         @endforeach
                       </tbody>

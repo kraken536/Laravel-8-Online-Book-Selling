@@ -39,7 +39,12 @@ class HomeController extends Controller
         $last = Product::select('title','image','price','id')->OrderByDesc('id')->limit(3)->get();
         $picked = Product::select('title','image','price','id')->inRandomOrder()->limit(3)->get();
         // print_Kr($last);exit();
-        return view('layouts._home', ['slider' => $slider, 'daily' => $daily, 'last'=>$last, 'picked'=>$picked]);
+        return view('layouts._home', [
+            'slider' => $slider, 
+            'daily' => $daily, 
+            'last'=>$last, 
+            'picked'=>$picked
+        ]);
     }
 
     public function aboutus(){
@@ -114,7 +119,11 @@ class HomeController extends Controller
         $datalist = Product::where('category_id',$id)->get();
         $list = Category::find($id);
         //print_r($datalist);exit();
-        return view('home._categoryproduct',['id'=>$id, 'datalist'=>$datalist, 'list'=>$list]);
+        return view('home._categoryproduct',[
+            'id'=>$id, 
+            'datalist'=>$datalist, 
+            'list'=>$list
+        ]);
     }
 
     public function add_to_cart($id){
@@ -128,8 +137,11 @@ class HomeController extends Controller
         $total = Review::where('product_id',$id)->count();
         $rev = Review::where('product_id',$id)->get();
         
-        // View::composer('home.extra_details',['data'=>$data, 'datalist'=>$datalist]);
-        return view('home.product_details',['data_product'=>$data_product, 'datalist'=>$datalist, 'total'=>$total, 'rev'=>$rev]);
+        return view('home.product_details',[
+            'data_product'=>$data_product, 
+            'datalist'=>$datalist, 
+            'total'=>$total, 
+            'rev'=>$rev]);
     }
 
     public function getproduct(Request $request){
@@ -143,7 +155,11 @@ class HomeController extends Controller
         }else{
             $data = Product::where('title', 'like', '%'.$search.'%')->first(); 
             $list = Product::find($data->id);
-            return redirect()->route('category_products',['search'=>$search, 'id'=>$data->category_id, 'list'=>$list]);
+            return redirect()->route('category_products',[
+                'search'=>$search, 
+                'id'=>$data->category_id, 
+                'list'=>$list
+            ]);
         }
         
     }

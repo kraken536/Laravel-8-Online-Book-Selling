@@ -122,7 +122,12 @@
                           <td style=" padding-top: 40px;">{{$rs->total}}</td>
                           <td style=" padding-top: 40px;">{{$rs->created_at}}</td>
                           <td style=" padding-top: 40px;">{{$rs->status}}</td>
-                          <td style="text-align: center; padding-top: 30px"><a href="{{ route('user_product_edit', ['id' => $rs->id]) }}" alt="Report" title="Report" ><img src="{{ asset('assets')}}/report.png" width="35"></a></td><!--EDIT button -->
+                          <td style="text-align: center; padding-top: 30px">
+                            <a href="{{ route('user_order_edit', ['id' => $rs->id]) }}" alt="Report" title="Report" >
+                              <img src="{{ asset('assets')}}/report.png" width="35">
+                            </a>
+                          </td>
+                          <!--Report button -->
                         </tr>
                         @endforeach
                       </tbody>
@@ -206,8 +211,8 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                               <a href="{{route('product_detail',['id' => $rs->product->id])}}">{{$rs->product->title}}</a>
                             </td>
-                            <td style=" padding-top: 40px;">{{$rs->product->price}}</td>
-                            <td style=" padding-top: 40px;">
+                            <td style="padding-top: 40px;">{{$rs->product->price}}</td>
+                            <td style="padding-top: 40px;">
                               <form action="{{route('user_shopcart_update',['id'=>$rs->id])}}" method="post" enctype="multipart/form-data">
                                 @csrf  
                                 <input type="number" name="quantity" id="product-quanity" value="{{$rs->quantity}}" min="1" max="{{$rs->product->quantity}}" onchange="this.form.submit()">

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ShopCart;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,9 +59,14 @@ class ProductUserController extends Controller
         }
         $data->save();
         
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
-        $productlist = Product::where('user_id',Auth::user()->id)->get();
-        return redirect()->route('profile',['datalist' => $datalist, 'productlist' => $productlist])->with('success', 'Product Added successfully.');
+        $datalist = Review::where('user_id',Auth::id())->get();
+        $productlist = Product::where('user_id',Auth::id())->get();
+        $orderlist = Order::where('user_id', Auth::id())->get();
+        return redirect()->route('profile',[
+            'datalist' => $datalist, 
+            'productlist' => $productlist,
+            'orderlist'=>$orderlist
+            ])->with('success', 'Product Added successfully.');
     
     }
 
@@ -71,9 +78,16 @@ class ProductUserController extends Controller
      */
     public function show(Product $product)
     {
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
+        $datalist = Review::where('user_id',Auth::id())->get();
         $productlist = Category::with('children')->get();
-        return view('home.user_add_product',['datalist'=> $datalist, 'productlist'=>$productlist]);
+        $orderlist = Order::where('user_id', Auth::id())->get();
+        $cartlist = ShopCart::where('user_id', Auth::id())->get();
+        return redirect()->route('home.user_add_product',[
+            'datalist'=> $datalist, 
+            'productlist'=>$productlist,
+            'orderlist' => $orderlist,
+            'cartlist' => $cartlist,
+        ]);
     }
 
     /**
@@ -84,10 +98,14 @@ class ProductUserController extends Controller
      */
     public function edit(Product $product, $id)
     {
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
+        $datalist = Review::where('user_id',Auth::id())->get();
         $productlist = Category::with('children')->get();
         $object = Product::find($id); 
-        return view('home.user_product_update',['datalist'=>$datalist, 'productlist'=>$productlist, 'object'=>$object]);
+        return view('home.user_product_update',[
+            'datalist'=>$datalist, 
+            'productlist'=>$productlist, 
+            'object'=>$object
+        ]);
     }
 
     /**
@@ -118,11 +136,16 @@ class ProductUserController extends Controller
         
         $data->save();   
         
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
+        $datalist = Review::where('user_id',Auth::id())->get();
         $productlist = Category::with('children')->get();
         $object = Product::find($id);
 
-        return redirect()->route('user_product_edit',['id'=>$id,'datalist'=>$datalist, 'productlist'=>$productlist, 'object'=>$object])->with('success','Record Update Successfully.');
+        return redirect()->route('user_product_edit',[
+            'id'=>$id,
+            'datalist'=>$datalist, 
+            'productlist'=>$productlist, 
+            'object'=>$object
+            ])->with('success','Record Update Successfully.');
 
     }
 
@@ -137,10 +160,18 @@ class ProductUserController extends Controller
         $data = Product::find($id);
         $data->delete();
 
-        $datalist = Review::where('user_id',Auth::user()->id)->get();
-        $productlist = Product::where('user_id',Auth::user()->id)->get();
+        $datalist = Review::where('user_id',Auth::id())->get();
+        $productlist = Product::where('user_id',Auth::id())->get();
+        $cartlist = ShopCart::where('user_id', Auth::id())->get();
+        $orderlist = Order::where('user_id', Auth::id())->get();
 
-        return redirect()->route('profile',['datalist' => $datalist, 'productlist' => $productlist])->with('success', 'Record deleted successfully.');
+        return redirect()->route('profile',[
+            'datalist' => $datalist, 
+            'productlist' => $productlist,
+            'cartlist'=>$cartlist,
+            'orderlist' => $orderlist
+            
+            ])->with('success', 'Record deleted successfully.');
     
     }
 }
