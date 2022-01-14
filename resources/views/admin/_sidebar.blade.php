@@ -41,7 +41,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_message')}}">
             <i class="fas fa-envelope fa-fw"></i>
-            <span>Contact Massages</span></a>
+            <span>Contact Messages</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_review')}}">
@@ -71,6 +71,12 @@
                 <a class="collapse-item" href="{{route('admin_order_list_completed',['status','Completed'])}}">Completed Orders</a>
             </div>
         </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{Route('admin_users_list')}}">
+            {{-- <i class="fas fa-fw fa-table"></i> --}}
+            <i class="fas fa-user fa-sm fa-fw mr-2"></i>
+            <span>Users</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{Route('admin_setting')}}">

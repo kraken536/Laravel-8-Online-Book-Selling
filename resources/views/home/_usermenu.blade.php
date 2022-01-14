@@ -1,6 +1,6 @@
 @if(Auth::check())
     @if (Auth::user()->profile_photo_path)
-        <li class="dropdown"><a href="#"><img src="{{ Storage::url(Auth::user()->profile_photo_path) }}"  style="font-size:35px" width="40" class="tof">
+        <li class="dropdown"><a href="#"><img src="{{ Storage::url(Auth::user()->profile_photo_path) }}"  style="font-size:35px; border-radius: 30px" width="40" class="tof" >
     @else
         <li class="dropdown"><a href="#"><i class="bi-person-circle" style="font-size:35px"></i>
     @endif
@@ -19,6 +19,15 @@
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/shopping-cart.png" width="35">My ShopCart</a></li>
             <li><a href="#" onMouseOver="this.style.color='blue'"
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/wishlist.png" width="35">My Wishlist</a></li>
+                @php
+                $userRoles = Auth::user()->roles->pluck('name');
+                @endphp
+        
+                @if($userRoles->contains('Admin'))
+                <li><a href="#" onMouseOver="this.style.color='blue'"
+                    onMouseOut="this.style.color='grey'" target="_blank"><img src="{{ asset('assets')}}/wishlist.png" width="35">Admin Panel</a></li>
+                @endif
+                
             <li><a href="{{route('logout_home')}}"><i class="material-icons" style="color:red; font-size:35px">logout</i>Logout</a></li>
         </ul>
     @else

@@ -93,8 +93,11 @@ Route::get('/products/{id}',[HomeController::class,'product_details'])->name('pr
 Route::get('/addtoCart/{id}',[HomeController::class, 'add_to_cart'])->name('addToCart');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
 
+//////////////////////////////////////////////////////Admin Routes///////////////////////////////////////////////////////////////////////////
 //Categories routes:
 Route::middleware('auth')->prefix('admin')->group(function(){
+
+    Route::middleware('admin')->group(function() {
     Route::get('/',[AdminController::class,'index'])->name('admin_home');
 
     Route::get('category',[CategoryController::class,'index'])->name('admin_category');
@@ -175,6 +178,18 @@ Route::prefix('reviews')->group(function(){
         Route::post('update/{id}', [App\Http\Controllers\admin\OrderController::class,'update'])->name('admin_order_update');
         Route::get('delete/{id}', [App\Http\Controllers\admin\OrderController::class,'destroy'])->name('admin_order_delete');
         });
+
+        //Users Route
+    Route::prefix('users')->group(function(){
+
+        Route::get('/',[App\Http\Controllers\admin\UserController::class,'index'])->name('admin_users_list');
+        Route::get('add/{id}', [App\Http\Controllers\admin\UserController::class,'create'])->name('admin_user_role');
+        Route::post('store', [App\Http\Controllers\admin\UserController::class,'store'])->name('admin_faq_store');
+        Route::get('edit/{id}', [App\Http\Controllers\admin\UserController::class,'edit'])->name('admin_user_edit');
+        Route::post('update/{id}', [App\Http\Controllers\admin\UserController::class,'update'])->name('admin_faq_update');
+        Route::get('delete/{id}', [App\Http\Controllers\admin\UserController::class,'destroy'])->name('admin_user_delete');
+        });
+    });
 
 });
 
