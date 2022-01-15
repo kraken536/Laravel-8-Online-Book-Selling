@@ -1,5 +1,11 @@
 @extends('admin._blankpage')
 
+@section('page_header','Adding Products')
+
+@section('card_title','Adding Form')
+
+@section('title','Product Add')
+
 @section('javascript')
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -83,16 +89,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Add Product</button>
 </form>
-@endsection
-
-@section('page_header')
-    Adding Products
-@endsection
-
-@section('card_title')
-    Adding Form
-@endsection
-
-@section('title')
-    Product Add
 @endsection

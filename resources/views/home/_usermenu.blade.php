@@ -14,7 +14,7 @@
             <li style="margin-top: -3.2em"><a href="{{route('profile')}}" onMouseOver="this.style.color='blue'"
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/useri2.png" width="35">My Account</a></li>
             <li><a href="{{route('myReviews')}}" onMouseOver="this.style.color='blue'"
-                onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/message.png" width="35">My Reviews</a></li>
+                onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/reviews.png" width="35">My Reviews</a></li>
             <li><a href="{{route('user_shopcart')}}" onMouseOver="this.style.color='blue'"
                 onMouseOut="this.style.color='grey'"><img src="{{ asset('assets')}}/shopping-cart.png" width="35">My ShopCart</a></li>
             <li><a href="#" onMouseOver="this.style.color='blue'"
@@ -24,8 +24,8 @@
                 @endphp
         
                 @if($userRoles->contains('Admin'))
-                <li><a href="#" onMouseOver="this.style.color='blue'"
-                    onMouseOut="this.style.color='grey'" target="_blank"><img src="{{ asset('assets')}}/wishlist.png" width="35">Admin Panel</a></li>
+                <li><a href="{{route('admin_home')}}" onMouseOver="this.style.color='blue'"
+                    onMouseOut="this.style.color='grey'" target="_blank"><img src="{{ asset('assets')}}/admin.png" width="35">Admin Panel</a></li>
                 @endif
                 
             <li><a href="{{route('logout_home')}}"><i class="material-icons" style="color:red; font-size:35px">logout</i>Logout</a></li>

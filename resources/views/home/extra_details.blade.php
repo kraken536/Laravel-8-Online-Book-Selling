@@ -47,7 +47,6 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        {{-- {{ asset('assets') }}/extra/assets/img/product_single_10.jpg --}}
                         <img class="card-img img-fluid" src="{{ Storage::url($data->image) }}" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">

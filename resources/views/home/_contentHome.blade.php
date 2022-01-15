@@ -8,8 +8,7 @@
            $counter = 1;
          @endphp
         @foreach ($slider as $rs)
-        {{-- url('{{asset('assets/home/assets/img/slide/slide-1.jpg')}}') --}}
-         <!-- Slide 1 -->
+        <!-- Slide 1 -->
          @if($rs->image)
           <div class="carousel-item @if ($counter == 1) active @endif" style="background-image: url('{{ Storage::url($rs->image) }}')">
             @php
@@ -89,7 +88,6 @@
           @foreach ($daily as $rs)
               @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
                     <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -108,7 +106,6 @@
               
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                   <div class="portfolio-wrap">
-                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
                   <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                   <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -127,7 +124,6 @@
           @elseif ($counter == 3)
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
                 <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{{$rs->title}}</h4>
@@ -169,7 +165,6 @@
           @foreach ($last as $rs)
               @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
                     <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -188,7 +183,6 @@
               
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                   <div class="portfolio-wrap">
-                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
                   <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                   <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -207,7 +201,6 @@
           @elseif ($counter ==3)
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
                 <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{{$rs->title}}</h4>
@@ -252,7 +245,6 @@
           @foreach ($picked as $rs)
               @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
                     <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -271,7 +263,6 @@
               
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                   <div class="portfolio-wrap">
-                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
                   <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                   <div class="portfolio-info">
                       <h4>{{$rs->title}}</h4>
@@ -290,7 +281,6 @@
           @elseif ($counter ==3)
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                  {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
                 <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{{$rs->title}}</h4>

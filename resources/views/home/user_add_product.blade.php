@@ -20,13 +20,9 @@
     <div class="container">
       
       <div class="d-flex justify-content-between align-items-center">
-        {{-- <h2>About</h2> --}}
-                {{-- <h5 class="sidebar-title">Search</h5> --}}
-                
-                  <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
+        <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
                     @csrf
                     @livewire('search')
-                    {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
                     <button class="btn btn-outline-grey my-2 my-sm-0" type="submit"><img src="{{ asset('assets')}}/search-engine.png" width="35"></button>
                   </form>
                   @livewireScripts
@@ -99,8 +95,6 @@
                 </div>
               </div>
 
-              
-
               <div class="tab-pane" id="tab-2">
                 <div class="row">
                   <div class="col-lg-12 details order-2 order-lg-1">
@@ -144,14 +138,7 @@
               <div class="tab-pane" id="tab-3">
                 <div class="row">
                   <div class="col-lg-12 details order-2 order-lg-1">
-                    {{-- <section id="about" class="about">
-                      <div class="container">
-                
-                        <div class="row content">
-                          <section id="about" class="about">
-                            <div class="container">
-                      
-                              <div class="row content"> --}}
+                    
                                 <div class="table-responsive">
                                   <table class="table table-hover">
                                     @include('home.flash-message')
@@ -188,17 +175,6 @@
                                     </tbody>
                                   </table>
                               </div>
-                              
-                              {{-- </div>
-                            </div> --}}
-{{--                       
-                          </section>
-                      
-                        
-                        </div>
-                      </div>
-                
-                    </section> --}}
                 </div>
                 </div>
               </div>

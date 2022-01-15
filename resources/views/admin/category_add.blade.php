@@ -1,5 +1,8 @@
 @extends('admin._blankpage')
 
+@section('page_header','Adding Categories')
+
+@section('card_title','Adding Form')
 
 @section('contents')
 <form action ="{{ route('admin_category_create') }}" method ="post" enctype="multipart/form-data">
@@ -39,12 +42,4 @@
     <button type="submit" class="btn btn-primary">Add Category</button>
 </form>
 
-@endsection
-
-@section('page_header')
-    Adding Categories
-@endsection
-
-@section('card_title')
-    Adding Form
 @endsection

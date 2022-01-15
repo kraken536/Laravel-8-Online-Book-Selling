@@ -134,8 +134,8 @@ class HomeController extends Controller
     public function product_details($id){
         $data_product = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
-        $total = Review::where('product_id',$id)->count();
-        $rev = Review::where('product_id',$id)->get();
+        $total = Review::where('status', 'True')->where('product_id',$id)->count();
+        $rev = Review::where('product_id',$id)->where('status', 'True')->get();
         
         return view('home.product_details',[
             'data_product'=>$data_product, 

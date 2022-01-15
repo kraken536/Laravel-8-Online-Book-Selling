@@ -16,13 +16,9 @@
     <div class="container">
       
       <div class="d-flex justify-content-between align-items-center">
-        {{-- <h2>About</h2> --}}
-                {{-- <h5 class="sidebar-title">Search</h5> --}}
-                
-                  <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
+        <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
                     @csrf
                     @livewire('search')
-                    {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
                     <button class="btn btn-outline-grey my-2 my-sm-0" type="submit"><img src="{{ asset('assets')}}/search-engine.png" width="35"></button>
                   </form>
                   @livewireScripts
@@ -91,27 +87,22 @@
             <form method="post" action="{{route('send_message')}}" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
-                {{-- <label for="formGroupExampleInput">Example label</label> --}}
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name & Surname" required>
               </div>
               <br />
               <div class="form-group">
-                {{-- <label for="formGroupExampleInput2">Another label</label> --}}
                 <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
               </div>
               <br />
               <div class="form-group">
-                {{-- <label for="formGroupExampleInput2">Another label</label> --}}
                 <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
               </div>
               <br />
               <div class="form-group">
-                {{-- <label for="formGroupExampleInput2">Another label</label> --}}
                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
               </div>
               <br />
               <div class="form-group">
-                {{-- <label for="formGroupExampleInput2">Another label</label> --}}
                 <textarea type="text" class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
               </div>
               <br />

@@ -1,6 +1,12 @@
 @extends('admin._blankpage_copy')
 
 
+@section('page_header','Add Image(s)')
+
+@section('card_title') Product: {{$data->title}} @endsection
+
+@section('title','Add Image Page')
+
 @section('contents')
 <form action="{{route('admin_image_store',['product_id'=>$data->id])}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -52,28 +58,4 @@
     </div>
 </div>
 
-@endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-@section('page_header')
-    Add Image(s)
-@endsection
-
-@section('card_title')
-    Product: {{$data->title}}
-@endsection
-
-@section('title')
-    Add Image Page
 @endsection

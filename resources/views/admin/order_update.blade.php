@@ -4,8 +4,7 @@
 @section('page_header','Update Order')
 
 @section('card_title')
-Order:
-    {{-- Product: {{$data->title}} --}}
+    Order: {{$datalist->id}}
 @endsection
 
 @section('title','Order Update Page')

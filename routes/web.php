@@ -179,15 +179,19 @@ Route::prefix('reviews')->group(function(){
         Route::get('delete/{id}', [App\Http\Controllers\admin\OrderController::class,'destroy'])->name('admin_order_delete');
         });
 
-        //Users Route
-    Route::prefix('users')->group(function(){
+        //Admin Users Route
+    Route::prefix('user')->group(function(){
 
         Route::get('/',[App\Http\Controllers\admin\UserController::class,'index'])->name('admin_users_list');
-        Route::get('add/{id}', [App\Http\Controllers\admin\UserController::class,'create'])->name('admin_user_role');
-        Route::post('store', [App\Http\Controllers\admin\UserController::class,'store'])->name('admin_faq_store');
+        Route::get('add/{id}', [App\Http\Controllers\admin\UserController::class,'user_roles'])->name('admin_user_role');
+        Route::get('delete-role/{user_id}/{role_id}', [App\Http\Controllers\admin\UserController::class,'user_role_delete'])->name('admin_user_role_delete');
+        Route::post('store/{id}', [App\Http\Controllers\admin\UserController::class,'user_role_store'])->name('admin_user_store');
         Route::get('edit/{id}', [App\Http\Controllers\admin\UserController::class,'edit'])->name('admin_user_edit');
-        Route::post('update/{id}', [App\Http\Controllers\admin\UserController::class,'update'])->name('admin_faq_update');
+        Route::post('update/{id}', [App\Http\Controllers\admin\UserController::class,'update'])->name('admin_user_update');
         Route::get('delete/{id}', [App\Http\Controllers\admin\UserController::class,'destroy'])->name('admin_user_delete');
+        Route::get('show-edit/{id}', [App\Http\Controllers\admin\UserController::class,'show'])->name('admin_user_show_edit');
+        Route::get('show-info/{id}', [App\Http\Controllers\admin\UserController::class,'user_info'])->name('admin_user_show_info');
+        
         });
     });
 

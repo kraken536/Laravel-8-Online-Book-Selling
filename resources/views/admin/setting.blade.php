@@ -1,6 +1,11 @@
 @extends('admin._blankpage')
 
+@section('page_header','Settings')
 
+@section('card_title','Settings Configuration')
+
+@section('title','Settings Page')
+    
 @section('javascript')
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -207,25 +212,4 @@
     <button type="submit" class="btn btn-primary">Update Settings</button>
 </form>
 
-@endsection
-
-
-
-
-
-
-
-
-
-
-@section('page_header')
-    Settings
-@endsection
-
-@section('card_title')
-    Settings Configuration
-@endsection
-
-@section('title')
-    Settings Page
 @endsection

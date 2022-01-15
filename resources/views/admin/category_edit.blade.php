@@ -1,6 +1,12 @@
 @extends('admin._blankpage')
 
 
+@section('page_header','Edit Categories')
+
+@section('card_title','Editing Form')
+
+@section('title','Edit Page')
+
 @section('contents')
 @include('home.flash-message')
 <form action ="{{ route('admin_category_update', ['id' => $data->id]) }}" method ="post">
@@ -45,16 +51,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Update Category</button>
 </form>
-@endsection
-
-@section('page_header')
-    Edit Categories
-@endsection
-
-@section('card_title')
-    Editing Form
-@endsection
-
-@section('title')
-    Edit Page
 @endsection

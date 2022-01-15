@@ -4,7 +4,7 @@
 
 @section('card_title','Messages')
 
-@section('title','Contact Messages Page ')
+@section('title','Contact Messages Page')
 
 @section('contents')
 @include('home.flash-message')

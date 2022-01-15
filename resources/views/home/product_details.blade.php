@@ -67,13 +67,9 @@ h1 { font-size: 1.5em; margin: 10px; }
     <div class="container">
       
       <div class="d-flex justify-content-between align-items-center">
-        {{-- <h2>About</h2> --}}
-                {{-- <h5 class="sidebar-title">Search</h5> --}}
-                
-                  <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
+        <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
                     @csrf
                     @livewire('search')
-                    {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
                     <button class="btn btn-outline-grey my-2 my-sm-0" type="submit"><img src="{{ asset('assets')}}/search-engine.png" width="35"></button>
                   </form>
                   @livewireScripts
@@ -159,7 +155,6 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        {{-- {{ asset('assets') }}/extra/assets/img/product_single_10.jpg --}}
                         <img class="card-img img-fluid" src="{{ Storage::url($data_product->image) }}" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
@@ -188,14 +183,12 @@ https://templatemo.com/tm-559-zay-shop
                                       <div class="row">
                                         <div class="col-4">
                                           <a href="#">
-                                            {{-- {{ asset('assets') }}/extra/assets/img/product_single_01.jpg --}}
-                                              <img class="card-img img-fluid" src="{{Storage::url($data_product->image)}}" alt="Product Image".$img>
+                                            <img class="card-img img-fluid" src="{{Storage::url($data_product->image)}}" alt="Product Image".$img>
                                           </a>
                                       </div>
                                         @foreach ($datalist as $rs)
                                         <div class="col-4">
                                             <a href="#">
-                                              {{-- {{ asset('assets') }}/extra/assets/img/product_single_01.jpg --}}
                                                 <img class="card-img img-fluid" src="{{Storage::url($rs->image)}}" alt="Product Image".$img>
                                             </a>
                                         </div>
@@ -336,12 +329,6 @@ https://templatemo.com/tm-559-zay-shop
 </body>
 
 </html>
-                {{-- @include('home.extra_details') --}}
-              {{-- <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p> --}}
             </div>
           </div>
   
@@ -371,12 +358,6 @@ https://templatemo.com/tm-559-zay-shop
                   @endphp
                   <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Reviews ({{$count}})</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
-                </li>
               </ul>
             </div>
             <div class="col-lg-10 mt-4 mt-lg-0">
@@ -384,9 +365,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="tab-pane active show" id="tab-1">
                   <div class="row">
                     <div class="col-lg-8 details order-2 order-lg-1">
-                      {!! $data_product->description !!}
-                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                      <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                      <p>{!! $data_product->description !!}</p>
                     </div>
                     <div class="col-lg-4 text-center order-1 order-lg-2">
                       <img src="assets/img/features-1.png" alt="" class="img-fluid">
@@ -396,9 +375,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="tab-pane" id="tab-2">
                   <div class="row">
                     <div class="col-lg-8 details order-2 order-lg-1">
-                      {!! $data_product->details !!}
-                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                      <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                      <p> {!! $data_product->details !!}</p>
                     </div>
                     <div class="col-lg-4 text-center order-1 order-lg-2">
                       <img src="assets/img/features-2.png" alt="" class="img-fluid">
@@ -409,85 +386,66 @@ https://templatemo.com/tm-559-zay-shop
                   <div class="row">
                     <div class="col-lg-10 details order-2 order-lg-1">
                       <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+                      <section id="about" class="about">
+                        <div class="container">
 
-        <div class="row content">
-          <div class="col-lg-8">
+                          <div class="row content">
+                            <div class="col-lg-8">
+                              @php
 
-            @foreach ($rev as $txt)
-            <div class="card">
-            <div class="card-body">
-              
-              <div class="row">
-                  <div class="col-md-2">
-                      <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid" width="65"/>
-                      <p class="text-secondary text-center" style="font-size: 12px">{{$txt->created_at}}</p>
-                  </div>
-                  <div class="col-md-10">
-                      <p>
-                        <a class="float-left" href="#"><strong>{{$txt->user->name}}</strong></a>
-                     </p>
-                     
-                    <div class="clearfix"></div>
-                     <p>
-                      <a class="float-left" href="#" style="color: grey; text-align: justify;font-style: italic;"><strong>{{$txt->subject}}:</strong></a>
-                    </p>
-                    <div class="clearfix"></div>
-                      <p>{{$txt->review}}</p>
+                              @endphp
+                              @foreach ($rev as $txt)
+                              
+                              <div class="card">
+                              <div class="card-body">
+                                
+                                <div class="row">
+                                    <div class="col-md-2">
+                                      @if ($txt->user->profile_photo_path)
+                                        <img src="{{ Storage::url($txt->user->profile_photo_path) }}"  style="font-size:35px; border-radius: 30px" width="65" class="tof" >
+                                      @else
+                                        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid" width="65"/>
+                                      @endif
+                                        <p class="text-secondary text-center" style="font-size: 12px">{{$txt->created_at}}</p>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p>
+                                          <a class="float-left" href="#"><strong>{{$txt->user->name}}</strong></a>
+                                      </p>
+                                      
+                                      <div class="clearfix"></div>
+                                      <p>
+                                        <a class="float-left" href="#" style="color: grey; text-align: justify;font-style: italic;"><strong>{{$txt->subject}}:</strong></a>
+                                      </p>
+                                      <div class="clearfix"></div>
+                                        <p>{{$txt->review}}</p>
 
-                      <p>
-                        <span class="float-right"><i class="@if($txt->rate>=5) text-warning  @endif fa fa-star"></i></span>
-                        <span class="float-right"><i class="@if($txt->rate>=4) text-warning  @endif fa fa-star"></i></span>
-                        <span class="float-right"><i class="@if($txt->rate>=3) text-warning  @endif fa fa-star"></i></span>
-                        <span class="float-right"><i class="@if($txt->rate>=2) text-warning  @endif fa fa-star"></i></span>
-                        <span class="float-right"><i class="@if($txt->rate>=1) text-warning  @endif fa fa-star"></i></span>
-                        
-                     </p>
-                  </div>
-              </div>
-              
-          </div>
-        </div>
-        @endforeach
-          </div>
+                                        <p>
+                                          <span class="float-right"><i class="@if($txt->rate>=5) text-warning  @endif fa fa-star"></i></span>
+                                          <span class="float-right"><i class="@if($txt->rate>=4) text-warning  @endif fa fa-star"></i></span>
+                                          <span class="float-right"><i class="@if($txt->rate>=3) text-warning  @endif fa fa-star"></i></span>
+                                          <span class="float-right"><i class="@if($txt->rate>=2) text-warning  @endif fa fa-star"></i></span>
+                                          <span class="float-right"><i class="@if($txt->rate>=1) text-warning  @endif fa fa-star"></i></span>
+                                          
+                                      </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                          </div>
+                          @endforeach
+                            </div>
 
-          <div class="col-lg-4 pt-4 pt-lg-0">             
-              @livewire('review',['id' => $data_product->id])
-          </div>
-        </div>
+                            <div class="col-lg-4 pt-4 pt-lg-0">             
+                                @livewire('review',['id' => $data_product->id])
+                            </div>
+                          </div>
 
-      </div>
-    </section><!-- End About Section -->
+                        </div>
+                      </section>
+                      <!-- End About Section -->
                     </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      {{-- <img src="{{asset('ssets')}}/home/assets/img/features-3.png" alt="" class="img-fluid"> --}}
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-4">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                      <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                      <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/features-4.png" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-5">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                      <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                      <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/features-5.png" alt="" class="img-fluid">
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -495,7 +453,8 @@ https://templatemo.com/tm-559-zay-shop
           </div>
   
         </div>
-      </section><!-- End Features Section -->
+      </section>
+      <!-- End Features Section -->
 </main>
 
 @endsection

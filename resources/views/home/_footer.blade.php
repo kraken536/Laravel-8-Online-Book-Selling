@@ -9,7 +9,6 @@
             <div class="footer-info">
               <h3>Bookstore</h3>
               <p>
-                {{-- A108 Adam Street <br> --}}
                 {{ $data->address }}<br><br>
                 <strong>Phone:</strong> {{$data->phone}}<br>
                 <strong>Email:</strong> {{$data->email}}<br>
@@ -19,7 +18,6 @@
                 @if($data->facebook != null)<a href="{{$data->facebook}}" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>@endif
                 @if($data->instagram != null)<a href="{{$data->instagram}}" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>@endif
                 @if($data->youtube != null)<a href="{{$data->youtube}}" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>@endif
-                {{-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
               </div>
             </div>
           </div>

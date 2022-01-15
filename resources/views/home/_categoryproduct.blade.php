@@ -11,13 +11,9 @@
     <div class="container">
       
       <div class="d-flex justify-content-between align-items-center">
-        {{-- <h2>About</h2> --}}
-                {{-- <h5 class="sidebar-title">Search</h5> --}}
-                
-                  <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
+        <form action="{{route('getproduct')}}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
                     @csrf
                     @livewire('search')
-                    {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
                     <button class="btn btn-outline-grey my-2 my-sm-0" type="submit"><img src="{{ asset('assets')}}/search-engine.png" width="35"></button>
                   </form>
                   @livewireScripts
@@ -97,7 +93,6 @@
             @foreach ($datalist as $rs)
                 @if ($counter == 1)<div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                      {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg --}}
                       <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                       <div class="portfolio-info">
                         <h4>{{$rs->title}}</h4>
@@ -116,7 +111,6 @@
                 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg --}}
                     <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4>{{$rs->title}}</h4>
@@ -135,7 +129,6 @@
             @elseif ($counter ==3)
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="portfolio-wrap">
-                    {{-- {{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg --}}
                   <img src="{{ Storage::url($rs->image) }}" class="img-fluid" alt="">
                   <div class="portfolio-info">
                     <h4>{{$rs->title}}</h4>
