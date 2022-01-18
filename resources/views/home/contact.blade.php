@@ -53,7 +53,7 @@
       <div class="container">
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3001.492916144224!2d32.65447721570936!3d41.211027614871824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4083535a1262e845%3A0xd8db4aca72dc92de!2zS2FyYWLDvGsgw5xudi4geW9sdSwgS8SxbGF2dXpsYXIvS2FyYWLDvGsgTWVya2V6L0thcmFiw7xrLCBUdXJxdWll!3m2!1d41.2110236!2d32.6566659!5e0!3m2!1sfr!2sbg!4v1642477723921!5m2!1sfr!2sbg" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="row mt-5">

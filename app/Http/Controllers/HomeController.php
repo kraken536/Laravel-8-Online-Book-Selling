@@ -25,11 +25,11 @@ class HomeController extends Controller
     }
     
     public static function avg_review($id){
-        return Review::where('product_id', $id)->average('rate');
+        return Review::where('product_id', $id)->where('status', 'True')->average('rate');
     }
 
     public static function count_review($id){
-        return Review::where('product_id', $id)->count();
+        return Review::where('product_id', $id)->where('status', 'True')->count();
     }
 
     public function index(){
@@ -141,7 +141,8 @@ class HomeController extends Controller
             'data_product'=>$data_product, 
             'datalist'=>$datalist, 
             'total'=>$total, 
-            'rev'=>$rev]);
+            'rev'=>$rev
+        ]);
     }
 
     public function getproduct(Request $request){

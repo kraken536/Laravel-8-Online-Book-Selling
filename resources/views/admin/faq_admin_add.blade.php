@@ -3,16 +3,14 @@
 @section('javascript')
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     
 @endsection
 
 @section('page_header','Adding FAQ')
 
 @section('card_title','Adding FAQ Form')
-    @include('home.flash-message')
-@endsection
 
 @section('title','FAQ Add')
 
@@ -32,8 +30,8 @@
         <textarea id="summernote" name="answer" required></textarea>
         <script>
             $('#summernote').summernote({
-                tabsize: 2,
-                height: 120,
+                tabsize: 3,
+                height: 200,
                 toolbar: [
                     ['style', ['style']],
                     ['font', ['bold', 'italic', 'underline', 'clear']],

@@ -115,8 +115,8 @@
                 <textarea id="summernote0" name="contact">{{ $data->contact }}</textarea>
                 <script>
                     $('#summernote0').summernote({
-                        tabsize: 2,
-                        height: 120,
+                        tabsize: 8,
+                        height: 400,
                         toolbar: [
                             ['style', ['style']],
                             ['font', ['bold', 'italic', 'underline', 'clear']],
@@ -164,8 +164,8 @@
                 <textarea id="summernote" name="aboutus">{{ $data->aboutus }}</textarea>
                 <script>
                     $('#summernote').summernote({
-                        tabsize: 2,
-                        height: 120,
+                        tabsize: 8,
+                        height: 400,
                         toolbar: [
                             ['style', ['style']],
                             ['font', ['bold', 'italic', 'underline', 'clear']],
@@ -189,8 +189,8 @@
                 <textarea id="summernote2" name="references">{{ $data->references }}</textarea>
                 <script>
                     $('#summernote2').summernote({
-                        tabsize: 2,
-                        height: 120,
+                        tabsize: 8,
+                        height: 400,
                         toolbar: [
                             ['style', ['style']],
                             ['font', ['bold', 'italic', 'underline', 'clear']],

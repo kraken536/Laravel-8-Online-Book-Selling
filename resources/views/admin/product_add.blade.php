@@ -50,8 +50,8 @@
         <textarea id="summernote" name="details"></textarea>
         <script>
             $('#summernote').summernote({
-                tabsize: 2,
-                height: 120,
+                tabsize: 4,
+                height: 150,
                 toolbar: [
                     ['style', ['style']],
                     ['font', ['bold', 'italic', 'underline', 'clear']],

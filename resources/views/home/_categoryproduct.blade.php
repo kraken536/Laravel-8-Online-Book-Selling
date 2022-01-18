@@ -48,25 +48,24 @@
         <div class="container">
   
           <div class="row content">
-            <div class="col-lg-6">
-              <h2>Eum ipsam laborum deleniti velitena</h2>
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+            <div class="col-lg-5">
+              <h2>Why is Reading Important?</h2>
+              <h3>Challenge yourself by stepping out of your comfort zone, and you may even surprise yourself with a newfound passion. 
+               You’ll be amazed to see the places reading can take you.
+             </h3>
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
+            <div class="col-lg-7 pt-4 pt-lg-0">
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
-              <ul>
-                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-                <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
-              </ul>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
+                The importance of reading is completely undeniable. 
+                The next time someone asks you: “Why is reading important?” you will have an educated and thorough answer to respond with. 
+                If you’re not the biggest fan of books, that’s ok! You’re not alone! But before you shut down books and reading all together, 
+                take the time to learn more about the importance of reading and all the incredible benefits that come with it.
+               </p>
+               <ul>
+                 <li><i class="ri-check-double-line"></i> Reading Can Give You a Greater Perspective</li>
+                 <li><i class="ri-check-double-line"></i> Reading is a Great Conversation Starter</li>
+                 <li><i class="ri-check-double-line"></i> Reading Helps Your Vocabulary</li>
+               </ul>
             </div>
           </div>
   
@@ -98,8 +97,8 @@
                         <h4>{{$rs->title}}</h4>
                         <p>App</p>
                         <div class="portfolio-links">
-                          <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                          <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                          <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                         </div>
                       </div>
                     </div>
@@ -116,8 +115,8 @@
                         <h4>{{$rs->title}}</h4>
                         <p>Web</p>
                         <div class="portfolio-links">
-                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                          <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                          <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
                     </div>
@@ -134,8 +133,8 @@
                     <h4>{{$rs->title}}</h4>
                     <p>Card</p>
                     <div class="portfolio-links">
-                      <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                      <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                     </div>
                   </div>
                 </div>

@@ -1,30 +1,30 @@
 <section id="hero">
-     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
- 
-       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
- 
-       <div class="carousel-inner" role="listbox">
-         @php
-           $counter = 1;
-         @endphp
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+          @php
+            $counter = 1;
+          @endphp
         @foreach ($slider as $rs)
         <!-- Slide 1 -->
-         @if($rs->image)
+          @if($rs->image)
           <div class="carousel-item @if ($counter == 1) active @endif" style="background-image: url('{{ Storage::url($rs->image) }}')">
             @php
               $counter=2;
             @endphp
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
+                <h2 class="animate__animated animate__fadeInDown">{{$rs->title}}</h2>
                 <p class="animate__animated animate__fadeInUp">{{$rs->title}}</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <a href="{{route('product_detail',['id'=>$rs->id])}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
           </div>
          @endif
         @endforeach
-         
+    
        </div>
  
        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -45,25 +45,30 @@
        <div class="container">
  
          <div class="row content">
-           <div class="col-lg-6">
-             <h2>Eum ipsam laborum deleniti velitena</h2>
-             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+           <div class="col-lg-4">
+             <h2>Why is Reading Important?</h2>
+             <h3>Challenge yourself by stepping out of your comfort zone, and you may even surprise yourself with a newfound passion. 
+              You’ll be amazed to see the places reading can take you.
+            </h3>
            </div>
-           <div class="col-lg-6 pt-4 pt-lg-0">
+           <div class="col-lg-8 pt-4 pt-lg-0">
              <p>
-               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum
+              The importance of reading is completely undeniable. 
+              The next time someone asks you: “Why is reading important?” you will have an educated and thorough answer to respond with. 
+              If you’re not the biggest fan of books, that’s ok! You’re not alone! But before you shut down books and reading all together, 
+              take the time to learn more about the importance of reading and all the incredible benefits that come with it.
              </p>
              <ul>
-               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-               <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+               <li><i class="ri-check-double-line"></i> Reading Can Give You a Greater Perspective</li>
+               <li><i class="ri-check-double-line"></i> Reading is a Great Conversation Starter</li>
+               <li><i class="ri-check-double-line"></i> Reading Helps Your Vocabulary</li>
              </ul>
              <p class="fst-italic">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-               magna aliqua.
-             </p>
+              <strong>Overall:</strong>
+              It’s safe to say that reading can change your life for the better, and the importance of reading is undeniable. 
+              If you think that you hate reading books, then perhaps you just have yet to find the genre for your own personal style — but keep trying, and keep searching for what’s right for you.
+              A book is one of the most powerful things in the world, offering you new opportunities to learn, grow and be inspired!
+            </p>
            </div>
          </div>
  
@@ -93,7 +98,7 @@
                       <h4>{{$rs->title}}</h4>
                       <p>App</p>
                       <div class="portfolio-links">
-                        <a href="{{Route('addToCart',['id'=>$rs->id])}}" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}" title="Add To Cart"><i class="bx bx-plus"></i></a>
                         <a href="{{route('product_detail',['id'=>$rs->id])}}"class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                     </div>
@@ -111,8 +116,8 @@
                       <h4>{{$rs->title}}</h4>
                       <p>Web</p>
                       <div class="portfolio-links">
-                      <a href="" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
-                      <a href="" class="" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                      <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                   </div>
                   </div>
@@ -129,8 +134,8 @@
                   <h4>{{$rs->title}}</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
-                    <a href="" class="" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Add To Cart"><i class="bx bx-plus"></i></a>
+                    <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
               </div>
@@ -170,8 +175,8 @@
                       <h4>{{$rs->title}}</h4>
                       <p>App</p>
                       <div class="portfolio-links">
-                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                     </div>
                   </div>
@@ -188,8 +193,8 @@
                       <h4>{{$rs->title}}</h4>
                       <p>Web</p>
                       <div class="portfolio-links">
-                      <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                   </div>
                   </div>
@@ -206,8 +211,8 @@
                   <h4>{{$rs->title}}</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                    <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
               </div>
@@ -250,8 +255,8 @@
                       <h4>{{$rs->title}}</h4>
                       <p>App</p>
                       <div class="portfolio-links">
-                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                     </div>
                   </div>
@@ -268,8 +273,8 @@
                       <h4>{{$rs->title}}</h4>
                       <p>Web</p>
                       <div class="portfolio-links">
-                      <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                        <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                       </div>
                   </div>
                   </div>
@@ -286,8 +291,8 @@
                   <h4>{{$rs->title}}</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="" title="Add To ShopCart"><i class="bx bx-plus"></i></a>
+                    <a href="{{route('product_detail',['id'=>$rs->id])}}" class="" title="Product Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
               </div>
@@ -350,197 +355,37 @@
            <div class="col-md-6">
              <div class="icon-box">
                <i class="bi bi-briefcase"></i>
-               <h4><a href="#">Lorem Ipsum</a></h4>
-               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               <h4><a href="#">Objectivity</a></h4>
+               <p>The quality of being able to make a decision or judgment in a fair way that is not influenced by personal feelings or beliefs</p>
              </div>
            </div>
            <div class="col-md-6 mt-4 mt-md-0">
              <div class="icon-box">
                <i class="bi bi-card-checklist"></i>
-               <h4><a href="#">Dolor Sitema</a></h4>
-               <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+               <h4><a href="#"></a>Productivity</a></h4>
+               <p>Productivity is commonly defined as a ratio between the output volume and the volume of inputs. In other words, it measures how efficiently production inputs, such as labour and capital, are being used in an economy to produce a given level of output.</p>
              </div>
            </div>
            <div class="col-md-6 mt-4 mt-md-0">
              <div class="icon-box">
                <i class="bi bi-bar-chart"></i>
-               <h4><a href="#">Sed ut perspiciatis</a></h4>
-               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-             </div>
-           </div>
-           <div class="col-md-6 mt-4 mt-md-0">
-             <div class="icon-box">
-               <i class="bi bi-binoculars"></i>
-               <h4><a href="#">Nemo Enim</a></h4>
-               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+               <h4><a href="#">Audacity</a></h4>
+               <p>Boldness or daring, especially with confident or arrogant disregard for personal safety, conventional thought, or other restrictions.
+              </p>
              </div>
            </div>
            <div class="col-md-6 mt-4 mt-md-0">
              <div class="icon-box">
                <i class="bi bi-brightness-high"></i>
-               <h4><a href="#">Magni Dolore</a></h4>
-               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-             </div>
-           </div>
-           <div class="col-md-6 mt-4 mt-md-0">
-             <div class="icon-box">
-               <i class="bi bi-calendar4-week"></i>
-               <h4><a href="#">Eiusmod Tempor</a></h4>
-               <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+               <h4><a href="#">Vision</a></h4>
+               <p>Perception of the outside world through sight; physiological mechanism by which light radiation gives rise to visual sensations.
+                Clear, indistinct vision.</p>
              </div>
            </div>
          </div>
  
        </div>
      </section><!-- End Services Section -->
- 
-     <!-- ======= Portfolio Section ======= -->
-     <section id="portfolio" class="portfolio">
-       <div class="container">
- 
-         <div class="row">
-           <div class="col-lg-12 d-flex justify-content-center">
-             <ul id="portfolio-flters">
-               <li data-filter="*" class="filter-active">All</li>
-               <li data-filter=".filter-app">App</li>
-               <li data-filter=".filter-card">Card</li>
-               <li data-filter=".filter-web">Web</li>
-             </ul>
-           </div>
-         </div>
- 
-         <div class="row portfolio-container">
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>App 1</h4>
-                 <p>App</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Web 3</h4>
-                 <p>Web</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>App 2</h4>
-                 <p>App</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Card 2</h4>
-                 <p>Card</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Web 2</h4>
-                 <p>Web</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>App 3</h4>
-                 <p>App</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Card 1</h4>
-                 <p>Card</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Card 3</h4>
-                 <p>Card</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-             <div class="portfolio-wrap">
-               <img src="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-               <div class="portfolio-info">
-                 <h4>Web 3</h4>
-                 <p>Web</p>
-                 <div class="portfolio-links">
-                   <a href="{{ asset('assets') }}/home/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                 </div>
-               </div>
-             </div>
-           </div>
- 
-         </div>
- 
-       </div>
-     </section><!-- End Portfolio Section -->
  
    </main>
    <!-- End #main -->

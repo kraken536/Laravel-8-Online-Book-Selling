@@ -13,7 +13,6 @@
 
 @section('card_title')
 Updating FAQ Form
-    @include('home.flash-message')
 @endsection
 
 @section('title','FAQ Update')

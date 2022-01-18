@@ -45,11 +45,11 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Details</label>  
-        <textarea id="summernote" name="details">{{ $data->details }}</textarea>
+        <textarea id="summernote" name="details">{!! $data->details !!}</textarea>
         <script>
             $('#summernote').summernote({
-                tabsize: 2,
-                height: 120,
+                tabsize: 4,
+                height: 150,
                 toolbar: [
                     ['style', ['style']],
                     ['font', ['bold', 'italic', 'underline', 'clear']],

@@ -226,7 +226,7 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card-body">
                           <ul class="list-inline pb-3">
                             <li class="list-inline-item text-right">
-                              <h5><strong>Title:</strong> &nbsp;&nbsp;{{$data_product->title}}</h5>
+                              <h5 style="text-align: center;"><strong>Title:</strong> &nbsp;&nbsp;{{$data_product->title}}</h5>
                             </li>
                             <br />
                             <li class="list-inline-item text-right">
@@ -234,15 +234,10 @@ https://templatemo.com/tm-559-zay-shop
                             </li>
                             <br />
                             <li class="list-inline-item text-right">
-                             
-                                
-                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
-                                  <span class="float-right"><i class="text-warning fa fa-star"></i></span> 
-                                
-                                  <h5><strong>Review:</strong>&nbsp;</h5>
+                              @php
+                                $avgReview = round(App\Http\Controllers\HomeController::avg_review($data_product->id), 2)
+                              @endphp
+                              <h5><strong>Review:</strong> &nbsp;&nbsp;{{$avgReview}} star(s) out of 5 in average.</h5>
                             </li>
                             <br>
                             <li class="list-inline-item text-right">
