@@ -237,7 +237,14 @@ https://templatemo.com/tm-559-zay-shop
                               @php
                                 $avgReview = round(App\Http\Controllers\HomeController::avg_review($data_product->id), 2)
                               @endphp
-                              <h5><strong>Review:</strong> &nbsp;&nbsp;{{$avgReview}} star(s) out of 5 in average.</h5>
+                              <h5><strong>Review:</strong> &nbsp;&nbsp;
+                                <span class="fa fa-star" @if($avgReview >= 1)style="color: gold"@endif ></span>
+                                <span class="fa fa-star" @if($avgReview >= 2)style="color: gold"@endif></span>
+                                <span class="fa fa-star" @if($avgReview >= 3)style="color: gold"@endif></span>
+                                <span class="fa fa-star" @if($avgReview >= 4)style="color: gold"@endif></span>
+                                <span class="fa fa-star" @if($avgReview >= 5)style="color: gold"@endif></span>
+                                ({{$avgReview}} star(s) out of 5 in average)</h5>
+                              
                             </li>
                             <br>
                             <li class="list-inline-item text-right">
