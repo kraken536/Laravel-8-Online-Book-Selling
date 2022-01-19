@@ -325,14 +325,18 @@
                 <label>Slug</label>
                 <input type="text" class="form-control" id="" name="slug" placeholder="Slug">
             </div>
-              
+            @php
+            $userRoles = Auth::user()->roles->pluck('name');
+            @endphp
+    
               <div class="form-group">
                 <label>Status</label>
-                <select class="form-control" name="status">
+                <select class="form-control" name="status" @if(!$userRoles->contains('Admin')) disabled @endif>
                     <option selected="selected">False</option>
                     <option>True</option>
                 </select>
             </div>
+            
               <br />
               <div class="form-group" style="text-align: center"><button type="submit" class="btn btn-danger">Save Product</button></div>
             </form>

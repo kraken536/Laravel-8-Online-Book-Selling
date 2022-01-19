@@ -34,10 +34,10 @@ class HomeController extends Controller
 
     public function index(){
 
-        $slider = Product::select('title','image','price','id')->limit(4)->get();
-        $daily = Product::select('title','image','price','id')->inRandomOrder()->limit(3)->get();
-        $last = Product::select('title','image','price','id')->OrderByDesc('id')->limit(3)->get();
-        $picked = Product::select('title','image','price','id')->inRandomOrder()->limit(3)->get();
+        $slider = Product::select('title','image','price','id')->where('status', 'True')->limit(4)->get();
+        $daily = Product::select('title','image','price','id')->where('status', 'True')->inRandomOrder()->limit(3)->get();
+        $last = Product::select('title','image','price','id')->where('status', 'True')->OrderByDesc('id')->limit(3)->get();
+        $picked = Product::select('title','image','price','id')->where('status', 'True')->inRandomOrder()->limit(3)->get();
         // print_Kr($last);exit();
         return view('layouts._home', [
             'slider' => $slider, 
@@ -53,7 +53,7 @@ class HomeController extends Controller
 
     public function faq(){
 
-        $datalist = Faq::orderBy('position')->get();
+        $datalist = Faq::orderBy('position')->where('status', 'True')->get();
         return view('home.faq',['datalist' => $datalist]);
     }
 
@@ -116,7 +116,7 @@ class HomeController extends Controller
     }
 
     public function categoryproduct($id){
-        $datalist = Product::where('category_id',$id)->get();
+        $datalist = Product::where('category_id',$id)->where('status', 'True')->get();
         $list = Category::find($id);
         //print_r($datalist);exit();
         return view('home._categoryproduct',[
@@ -148,7 +148,7 @@ class HomeController extends Controller
     public function getproduct(Request $request){
 
         $search = $request->input('search');
-        $count = Product::where('title', 'like', '%'.$search.'%')->get()->count();
+        $count = Product::where('status', 'True')->where('title', 'like', '%'.$search.'%')->get()->count();
     
         if($count== 1){
             $data = Product::where('title', 'like', '%'.$search.'%')->first();

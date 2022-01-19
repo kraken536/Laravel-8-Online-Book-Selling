@@ -33,7 +33,6 @@ class CategoryController extends Controller
     public function index()
     {
         $datalist = Category::with('children')->get();  
-        //DB::table('categories')->get();
         return view('admin.category',['datalist'=> $datalist]);
     }
 
@@ -135,6 +134,6 @@ class CategoryController extends Controller
         $data = Category::find($id);
         $data->delete();
 
-        return redirect()->route('admin_category')->with('success', 'Record deleted successfully.');;
+        return redirect()->back()->with('success', 'Record deleted successfully.');;
     }
 }

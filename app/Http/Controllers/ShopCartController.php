@@ -103,6 +103,6 @@ class ShopCartController extends Controller
     {
         $data = ShopCart::find($id);
         $data->delete();
-        return redirect()->route('user_shopcart')->with('success','Product Removed From ShopCart.');
+        return redirect()->back()->with('success','Product Removed From ShopCart.');
     }
 }

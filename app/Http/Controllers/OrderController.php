@@ -54,7 +54,7 @@ class OrderController extends Controller
 
         $data->save();
 
-        //We wiil store the bought products in the orderProduct DB
+        //We will store the bought products in the orderProduct DB
         $datalist = ShopCart::where('user_id',Auth::id())->get();
         foreach($datalist as $rs){
             $data2 = new OrderProduct;

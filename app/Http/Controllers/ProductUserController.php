@@ -82,7 +82,7 @@ class ProductUserController extends Controller
         $productlist = Category::with('children')->get();
         $orderlist = Order::where('user_id', Auth::id())->get();
         $cartlist = ShopCart::where('user_id', Auth::id())->get();
-        return redirect()->route('home.user_add_product',[
+        return view('home.user_add_product',[
             'datalist'=> $datalist, 
             'productlist'=>$productlist,
             'orderlist' => $orderlist,
@@ -100,10 +100,14 @@ class ProductUserController extends Controller
     {
         $datalist = Review::where('user_id',Auth::id())->get();
         $productlist = Category::with('children')->get();
+        $orderlist = Order::where('user_id', Auth::id())->get();
+        $cartlist = ShopCart::where('user_id', Auth::id())->get();
         $object = Product::find($id); 
         return view('home.user_product_update',[
             'datalist'=>$datalist, 
-            'productlist'=>$productlist, 
+            'productlist'=>$productlist,
+            'orderlist' =>$orderlist,
+            'cartlist' =>$cartlist,
             'object'=>$object
         ]);
     }
@@ -138,12 +142,14 @@ class ProductUserController extends Controller
         
         $datalist = Review::where('user_id',Auth::id())->get();
         $productlist = Category::with('children')->get();
+        $orderlist = Order::where('user_id', Auth::id())->get();
         $object = Product::find($id);
 
         return redirect()->route('user_product_edit',[
             'id'=>$id,
             'datalist'=>$datalist, 
             'productlist'=>$productlist, 
+            'orderlist'=>$orderlist,
             'object'=>$object
             ])->with('success','Record Update Successfully.');
 
